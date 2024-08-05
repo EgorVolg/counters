@@ -8,9 +8,9 @@ export const Item = ({
                          address,
                          description,
                      }: TItem) => {
+
     return (
-        <div>
-            <li>1</li>
+        <div className='flex'>
             <div>{_type}</div>
             <div>{installation_date}</div>
             <div>{is_automatic}</div>

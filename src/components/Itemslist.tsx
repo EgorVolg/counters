@@ -10,10 +10,11 @@ export type TItem = {
     description: string;
 }
 export const Itemslist = ({state}: []) => {
-     const mapConst = () => {
+    const mapConst = () => {
         return (
-            state.map((obj: TItem) => (
+            state.map((obj: TItem, index: number) => (
                 <Item
+                    key={index}
                     _type={obj._type}
                     installation_date={obj.installation_date}
                     is_automatic={obj.is_automatic}

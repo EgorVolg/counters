@@ -12,18 +12,21 @@ export const App = () => {
             );
             setState(itemsResponce.data.results);
         }
+
         fetchData();
     }, []);
 
     return (
-        <div style={{height: "100vh", padding: "16px"}}>
+        <div className="container bg-[#F8F9FA]">
             <header>
                 <h1>Список счётчиков</h1>
+                <h1 className="text-3xl font-bold underline bg-amber-600">
+                    Hello world!
+                </h1>
             </header>
-            <main style={{borderRadius: "12px", border: "1px solid #F8F9FA", height: "100%"}}>
+            <main className="container rounded-[12px] border-[1px] border-solid border-[#E0E5EB]">
                 <Itemslist state={state}/>
             </main>
-
         </div>
     )
 }
