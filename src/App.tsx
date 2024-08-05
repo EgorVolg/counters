@@ -1,17 +1,25 @@
 import React from "react";
 import axios from "axios";
-import {Itemslist} from "./components/Itemslist.tsx";
+import {ItemsList} from "./components/Itemslist.tsx";
 
 export const App = () => {
-    const [state, setState] = React.useState([])
+    const [meters, setMeters] = React.useState([])
+    const [areas, setAreas] = React.useState([])
+
 
     React.useEffect(() => {
         async function fetchData() {
-            const itemsResponce = await axios.get(
+            const metersResponse = await axios.get(
                 "http://showroom.eis24.me/api/v4/test/meters/"
             );
-            setState(itemsResponce.data.results);
+
+            const areasResponse = await axios.get(
+                "http://showroom.eis24.me/api/v4/test/areas/"
+            )
+            setMeters(metersResponse.data.results);
+            setAreas(areasResponse.data.results);
         }
+
 
         fetchData();
     }, []);
@@ -22,7 +30,7 @@ export const App = () => {
                 <h1>Список счётчиков</h1>
             </header>
             <main className="m-3 rounded-[12px] border-[1px] border-solid border-[#E0E5EB]">
-                <Itemslist state={state}/>
+                <ItemsList meters={meters} areas={areas}/>
             </main>
 
         </div>

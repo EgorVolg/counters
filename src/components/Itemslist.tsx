@@ -1,15 +1,23 @@
 import {Item} from "./Item.tsx";
 
+export type TAreas = {
+    "number": number,
+    "str_number": string,
+    "str_number_full": string,
+    "address": string
+}
+
 export type TItem = {
     _type: [];
     installation_date: string;
-    is_automatic: any;
+    is_automatic: null;
     initialValues: string;
-    address: string;
-    description: sting;
+    address: TAreas;
+    description: string;
 }
-export const Itemslist = ({state}: []) => {
-    const navItemslist = [
+
+export const ItemsList = ({meters, areas}: []) => {
+    const navItemsList = [
         {title: "№"},
         {title: "Тип"},
         {title: "Дата установки"},
@@ -20,14 +28,14 @@ export const Itemslist = ({state}: []) => {
     ]
     const mapConst = () => {
         return (
-            state.map((obj: TItem, index: number) => (
+            meters.map((obj: TItem, index: number) => (
                 <Item
                     key={index}
                     _type={obj._type}
                     installation_date={obj.installation_date}
                     is_automatic={obj.is_automatic}
                     initialValues={obj.initialValues}
-                    address={"address"}
+                    address={ }
                     description={obj.description}
                 />))
         )
@@ -35,7 +43,7 @@ export const Itemslist = ({state}: []) => {
 
     const mapConst2 = () => {
         return (
-            navItemslist.map((str: { title: string }, index: number) => (
+            navItemsList.map((str: { title: string }, index: number) => (
                 <div
                     className="p-1"
                     key={index}
