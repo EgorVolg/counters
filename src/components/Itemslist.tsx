@@ -9,12 +9,10 @@ export type TItem = {
     address: string;
     description: string;
 }
-export const Itemslist = ({state}: any) => {
-    const [items, setItems] = useState(state)
-    console.log(items)
-    const mapConst = () => {
-        return setItems(
-            items.map((obj: TItem) => (
+export const Itemslist = ({state}: []) => {
+     const mapConst = () => {
+        return (
+            state.map((obj: TItem) => (
                 <Item
                     _type={obj._type}
                     installation_date={obj.installation_date}
@@ -29,6 +27,6 @@ export const Itemslist = ({state}: any) => {
     return (
         <div>
             {mapConst()}
-         </div>
+        </div>
     )
 }

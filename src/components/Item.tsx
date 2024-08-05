@@ -10,7 +10,7 @@ export const Item = ({
                      }: TItem) => {
     return (
         <div>
-            <div>1</div>
+            <li>1</li>
             <div>{_type}</div>
             <div>{installation_date}</div>
             <div>{is_automatic}</div>

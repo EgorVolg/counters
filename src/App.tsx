@@ -10,9 +10,8 @@ export const App = () => {
             const itemsResponce = await axios.get(
                 "http://showroom.eis24.me/api/v4/test/meters/"
             );
-            setState(itemsResponce.data);
+            setState(itemsResponce.data.results);
         }
-
         fetchData();
     }, []);
 
