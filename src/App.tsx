@@ -1,5 +1,5 @@
 import React from "react";
- import axios from "axios";
+import axios from "axios";
 import {Itemslist} from "./components/Itemslist.tsx";
 
 export const App = () => {
@@ -7,10 +7,10 @@ export const App = () => {
 
     React.useEffect(() => {
         async function fetchData() {
-            const itemsResponse = await axios.get(
+            const itemsResponce = await axios.get(
                 "http://showroom.eis24.me/api/v4/test/meters/"
             );
-            setState(itemsResponse.data);
+            setState(itemsResponce.data);
         }
 
         fetchData();
@@ -22,7 +22,7 @@ export const App = () => {
                 <h1>Список счётчиков</h1>
             </header>
             <main style={{borderRadius: "12px", border: "1px solid #F8F9FA", height: "100%"}}>
-                <Itemslist state={state} />
+                <Itemslist state={state}/>
             </main>
 
         </div>
