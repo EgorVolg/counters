@@ -17,16 +17,14 @@ export const App = () => {
     }, []);
 
     return (
-        <div className="container bg-[#F8F9FA]">
+        <div className="block  bg-[#F8F9FA]">
             <header>
                 <h1>Список счётчиков</h1>
-                <h1 className="text-3xl font-bold underline bg-amber-600">
-                    Hello world!
-                </h1>
             </header>
-            <main className="container rounded-[12px] border-[1px] border-solid border-[#E0E5EB]">
+            <main className="m-3 rounded-[12px] border-[1px] border-solid border-[#E0E5EB]">
                 <Itemslist state={state}/>
             </main>
+
         </div>
     )
 }
