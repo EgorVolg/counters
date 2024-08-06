@@ -28,7 +28,7 @@ export const Item = ({
         }
         if (_type[0] === "ColdWaterAreaMeter") {
             return (
-                <div className="flex items-center justify-start">
+                <div className="flex items-center justify-start" >
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M8.89218 1.42C8.89442 1.39678 8.89999 1.36673 8.89999 1.34146C8.89999 1.15298 8.76063 1 8.5889 1C8.51579 1 8.46441 1.03005 8.44452 1.03859C7.3883 1.49137 3.29999 5.95669 3.29999 9.87803C3.29999 12.7067 5.38941 15 7.96665 15C10.8006 15 12.6333 12.38 12.6333 9.87803C12.6333 5.71663 8.16486 4.94834 8.89218 1.42Z"
@@ -44,13 +44,14 @@ export const Item = ({
 
 
     return (
-        <div className='grid grid-cols-[0.6fr_0.8fr_0.8fr_0.8fr_0.8fr_1.8fr_1.8fr] gap-[0px 0px] grid-flow-row'>
+        <ol className='grid grid-cols-[0.6fr_0.8fr_0.8fr_0.8fr_0.8fr_1.8fr_1.8fr] gap-[0px 0px] grid-flow-row'>
+
             <div>{getType()}</div>
             <div>{installation_date}</div>
             <div>{is_automatic}</div>
             <div>{initialValues}</div>
             <div>{address}</div>
             <div>{description}</div>
-        </div>
+        </ol>
     )
 }
