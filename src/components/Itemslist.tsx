@@ -11,7 +11,9 @@ export type TItem = {
     description: string;
 }
 
-export const ItemsList = () => {
+export const ItemsList = (areas: any) => {
+    console.log(areas)
+
     const [meters, setMeters] = React.useState([])
 
     React.useEffect(() => {
@@ -35,21 +37,6 @@ export const ItemsList = () => {
         {title: "Примечание"}
     ]
 
-    // const metersMapfn = () => {
-    //     return (
-    //         areas.map((obj: TItem, index: number) => (
-    //             <Item
-    //                 key={index}
-    //                 _type={obj._type}
-    //                 installation_date={obj.installation_date}
-    //                 is_automatic={obj.is_automatic}
-    //                 initialValues={obj.initialValues}
-    //                 address={'address'}
-    //                 description={obj.description}
-    //             />))
-    //     )
-    // }
-
     const navItemsListMap = () => {
         return (
             navItemsList.map((str: { title: string }, index: number) => (
@@ -62,16 +49,30 @@ export const ItemsList = () => {
             ))
         )
     }
-    console.log(meters)
-    return (
 
+    const metersMapfn = () => {
+        return (
+            meters.map((obj: TItem, i: number = 0) => (
+                <Item
+                    key={i}
+                    number={i}
+                    _type={obj._type}
+                    installation_date={obj.installation_date}
+                    is_automatic={obj.is_automatic}
+                    initialValues={obj.initialValues}
+                    address={'address'}
+                    description={obj.description}
+                />))
+        )
+    }
+    return (
         <div>
             <header className="grid grid-cols-[0.5fr_0.8fr_0.8fr_0.8fr_0.8fr_1.8fr_1.8fr] gap-[0px 0px] grid-flow-row">
                 {navItemsListMap()}
             </header>
-            {/*<div>*/}
-            {/*    {metersMapfn()}*/}
-            {/*</div>*/}
+            <div>
+                {metersMapfn()}
+            </div>
         </div>
     )
 }
