@@ -53,12 +53,12 @@ export const ItemsList = (areas: TArea[]) => {
     }
 
     const createMeter: TMeter[] = meters.map((obj: TMeter) => {
-        const areaMap = areas.find((el: TArea) => el.id === obj.id);
+        const areaMap = areas.find((el: TArea) => el.id === obj.area.id);
 
         if (areaMap) {
-            return {...obj, ...areaMap}; 
+            return {...obj, ...areaMap}; // Объединяем объекты
         }
-        return obj;
+        return obj; // Если совпадений нет, возвращаем оригинальный объект
     })
     console.log(createMeter)
 
