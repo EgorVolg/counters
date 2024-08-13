@@ -1,7 +1,5 @@
-import {TMeter} from "./Itemslist.tsx";
-import {TArea} from "../App.tsx"
+import {TItem} from "./types.ts";
 
-export type TItem = TMeter & TArea;
 
 export const Item = ({
                          _type,
@@ -14,7 +12,6 @@ export const Item = ({
                          description,
                          str_number,
                          str_number_full,
-                         house,
                      }: TItem) => {
 
     const getType = () => {
@@ -60,10 +57,7 @@ export const Item = ({
             <div>{number}</div>
             <div>{str_number}</div>
             <div>{str_number_full}</div>
-            {/*<div>{...house}</div>*/}
-            {/*serial_number={obj.serial_number}*/}
-            {/*brand_name={obj.brand_name}*/}
-            {/*model_name={obj.model_name}*/}
+
 
         </div>
 

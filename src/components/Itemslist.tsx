@@ -1,24 +1,12 @@
 import React from "react";
 import metersArr from "../meters.json"
-import {TArea} from "../App.tsx";
+import {TArea, TMeter} from "./types.ts";
+import {Item} from "./Item.tsx";
 
-export type TMeter = {
-    id: string,
-    _type: string[],
-    area: {
-        id: string,
-    };
-    is_automatic: null,
-    communication: string,
-    description: string,
-    serial_number: string,
-    installation_date: string,
-    brand_name: null,
-    model_name: null,
-    initial_values: number[],
+type TProps = {
+    areas: TArea[]
 }
-
-export const ItemsList = (areas: TArea[]) => {
+export const ItemsList: React.FC<TProps> = ({areas}) => {
     const [meters, setMeters] = React.useState<TMeter[]>([])
 
     React.useEffect(() => {
@@ -52,23 +40,34 @@ export const ItemsList = (areas: TArea[]) => {
         )
     }
 
-    const createMeter: TMeter[] = meters.map((obj: TMeter) => {
-        const areaMap = areas.find((el: TArea) => el.id === obj.area.id);
+    const createMeter = meters.map((obj: TMeter) => {
+            const areaMap = areas.find((el: TArea) => el.id === obj.area.id);
 
-        if (areaMap) {
-            return {...obj, ...areaMap}; // Объединяем объекты
+            if (areaMap) {
+                const newObj = {...obj, ...areaMap}
+                return (
+                    <Item id={newObj.id} _type={newObj._type} area={newObj.area} is_automatic={newObj.is_automatic}
+                          communication={newObj.communication} description={newObj.description}
+                          serial_number={newObj.serial_number}
+                          installation_date={newObj.installation_date} brand_name={newObj.brand_name}
+                          model_name={newObj.brand_name} initial_values={newObj.initial_values} number={newObj.number}
+                          str_number={newObj.str_number}
+                          str_number_full={newObj.str_number_full} house={newObj.house}/>
+                )
+            }
+
+            return obj;
         }
-        return obj; // Если совпадений нет, возвращаем оригинальный объект
-    })
-    console.log(createMeter)
+    )
 
     return (
         <div>
-            <header className="grid grid-cols-[0.5fr_0.8fr_0.8fr_0.8fr_0.8fr_1.8fr_1.8fr] gap-[0px 0px] grid-flow-row">
+            <header
+                className="grid grid-cols-[0.5fr_0.8fr_0.8fr_0.8fr_0.8fr_1.8fr_1.8fr] gap-[0px 0px] grid-flow-row">
                 {navItemsListMap()}
             </header>
             <main>
-
+                {createMeter}
             </main>
         </div>
     )

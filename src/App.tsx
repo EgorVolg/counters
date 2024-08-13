@@ -1,18 +1,7 @@
 import React from "react";
 import {ItemsList} from "./components/Itemslist.tsx";
 import areasArr from "./areas.json"
-
-export type TArea = {
-    id: string;
-    number: number;
-    str_number: string;
-    str_number_full: string;
-    house: {
-        address: string;
-        id: string;
-        fias_addrobjs: string[];
-    }
-}
+import {TArea} from "./components/types.ts";
 
 export const App = () => {
     const [areas, setAreas] = React.useState<TArea[]>([])
@@ -23,6 +12,7 @@ export const App = () => {
         }
         areasFetchData();
     }, []);
+
     return (
         <div className="block bg-[#F8F9FA]">
             <header>
