@@ -1,25 +1,29 @@
-import {Item} from "./Item.tsx";
 import React from "react";
-import axios from "axios";
+import metersArr from "../meters.json"
+import {TArea} from "../App.tsx";
 
-export type TItem = {
-    _type: [];
-    installation_date: string;
-    is_automatic: null;
-    initialValues: string;
-    // address: TAreas;
-    description: string;
+export type TMeter = {
+    id: string,
+    _type: string[],
+    area: {
+        id: string,
+    };
+    is_automatic: null,
+    communication: string,
+    description: string,
+    serial_number: string,
+    installation_date: string,
+    brand_name: null,
+    model_name: null,
+    initial_values: number[],
 }
 
-export const ItemsList = () => {
-    const [meters, setMeters] = React.useState([])
+export const ItemsList = (areas: TArea[]) => {
+    const [meters, setMeters] = React.useState<TMeter[]>([])
 
     React.useEffect(() => {
         async function metersFetchData() {
-            const metersResponse = await axios.get(
-                "http://showroom.eis24.me/api/v4/test/meters"
-            )
-            setMeters(metersResponse.data.results);
+            setMeters(metersArr);
         }
 
         metersFetchData();
@@ -35,21 +39,6 @@ export const ItemsList = () => {
         {title: "Примечание"}
     ]
 
-    // const metersMapfn = () => {
-    //     return (
-    //         areas.map((obj: TItem, index: number) => (
-    //             <Item
-    //                 key={index}
-    //                 _type={obj._type}
-    //                 installation_date={obj.installation_date}
-    //                 is_automatic={obj.is_automatic}
-    //                 initialValues={obj.initialValues}
-    //                 address={'address'}
-    //                 description={obj.description}
-    //             />))
-    //     )
-    // }
-
     const navItemsListMap = () => {
         return (
             navItemsList.map((str: { title: string }, index: number) => (
@@ -62,16 +51,25 @@ export const ItemsList = () => {
             ))
         )
     }
-    console.log(meters)
-    return (
 
+    const createMeter: TMeter[] = meters.map((obj: TMeter) => {
+        const areaMap = areas.find((el: TArea) => el.id === obj.id);
+
+        if (areaMap) {
+            return {...obj, ...areaMap}; 
+        }
+        return obj;
+    })
+    console.log(createMeter)
+
+    return (
         <div>
             <header className="grid grid-cols-[0.5fr_0.8fr_0.8fr_0.8fr_0.8fr_1.8fr_1.8fr] gap-[0px 0px] grid-flow-row">
                 {navItemsListMap()}
             </header>
-            {/*<div>*/}
-            {/*    {metersMapfn()}*/}
-            {/*</div>*/}
+            <main>
+
+            </main>
         </div>
     )
 }
