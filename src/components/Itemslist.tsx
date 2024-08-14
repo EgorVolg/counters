@@ -1,7 +1,7 @@
 import React from "react";
-import metersArr from "../meters.json"
 import {TArea, TMeter} from "./types.ts";
 import {Item} from "./Item.tsx";
+import axios from "axios";
 
 type TProps = {
     areas: TArea[]
@@ -11,13 +11,15 @@ export const ItemsList: React.FC<TProps> = ({areas}) => {
 
     React.useEffect(() => {
         async function metersFetchData() {
-            setMeters(metersArr);
+            const itemsRes = await axios.get(
+                "http://localhost:3000/meters"
+            )
+            setMeters(itemsRes.data);
         }
-
         metersFetchData();
     }, []);
 
-    const navItemsList = [
+     const navItemsList = [
         {title: "№"},
         {title: "Тип"},
         {title: "Дата установки"},

@@ -1,14 +1,17 @@
 import React from "react";
 import {ItemsList} from "./components/Itemslist.tsx";
-import areasArr from "./areas.json"
 import {TArea} from "./components/types.ts";
+import axios from "axios";
 
 export const App = () => {
     const [areas, setAreas] = React.useState<TArea[]>([])
 
     React.useEffect(() => {
         async function areasFetchData() {
-            setAreas(areasArr);
+            const fetchRes = await axios.get(
+                "http://localhost:3000/areas"
+            )
+            setAreas(fetchRes.data)
         }
         areasFetchData();
     }, []);
