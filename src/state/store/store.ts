@@ -28,12 +28,7 @@ const areasReducer = (state = initialState, action: TAction): TArea => {
     switch (action.type) {
         case "upState":
             return {
-                ...state,
-                id: 2,
-                number: 2,
-                str_number: "newNumber",
-                str_number_full: "newNumberFull",
-                address: "newAddress",
+
             }
         default:
             return state

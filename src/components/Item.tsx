@@ -1,21 +1,14 @@
 import {TItem} from "./types.ts";
+import React from "react";
 
+type TProps = {
+    el: TItem
+}
 
-export const Item = ({
-                         _type,
-                         number,
-                         installation_date,
-                         is_automatic,
-                         initial_values,
-                         id,
-                         area,
-                         description,
-                         str_number,
-                         str_number_full,
-                     }: TItem) => {
+export const Item: React.FC<TProps> = ({el}) => {
 
     const getType = () => {
-        if (_type[0] === "HotWaterAreaMeter") {
+        if (el._type[0] === "HotWaterAreaMeter") {
             return (
                 <div className="flex items-center justify-start">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -31,7 +24,7 @@ export const Item = ({
 
             )
         }
-        if (_type[0] === "ColdWaterAreaMeter") {
+        if (el._type[0] === "ColdWaterAreaMeter") {
             return (
                 <div className="flex items-center justify-start">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -48,17 +41,15 @@ export const Item = ({
     return (
         <div className='grid grid-cols-[0.6fr_0.8fr_0.8fr_0.8fr_0.8fr_1.8fr_1.8fr] gap-[0px 0px] grid-flow-row'>
             <div>{getType()}</div>
-            <div>{installation_date}</div>
-            <div>{is_automatic}</div>
-            <div>{id}</div>
-            <div>{initial_values}</div>
-            <div>{area.id}</div>
-            <div>{description}</div>
-            <div>{number}</div>
-            <div>{str_number}</div>
-            <div>{str_number_full}</div>
-
-
+            <div>{el.installation_date}</div>
+            <div>{el.is_automatic}</div>
+            <div>{el.id}</div>
+            <div>{el.initial_values}</div>
+            <div>{el.area.id}</div>
+            <div>{el.description}</div>
+            <div>{el.number}</div>
+            <div>{el.str_number}</div>
+            <div>{el.str_number_full}</div>
         </div>
 
     )
