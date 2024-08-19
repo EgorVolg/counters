@@ -1,40 +1,15 @@
-import {configureStore} from "@reduxjs/toolkit";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import { areasSlice } from "../slices/areasSlices";
+import { api } from "../../api/makeRequest";
 
-// type TStore = {
-//
-// }
 
-type TArea = {
-    id: number,
-    number: number,
-    str_number: string,
-    str_number_full: string,
-    address: string,
-}
+const reducers = combineReducers({
+    areas: areasSlice.reducer,
+    [api.reducerPath]: api.reducer
 
-const initialState: TArea = {
-    id: 1,
-    number: 1,
-    str_number: "",
-    str_number_full: "",
-    address: "",
-}
-
-type TAction = {
-    type: "upState"
-}
-
-const areasReducer = (state = initialState, action: TAction): TArea => {
-    switch (action.type) {
-        case "upState":
-            return {
-
-            }
-        default:
-            return state
-    }
-}
+})
 
 export const store = configureStore({
-    reducer: areasReducer,
-})
+    reducer: reducers,
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(api.middleware)
+})  
