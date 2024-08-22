@@ -18,15 +18,17 @@ export const ItemsList = () => {
     metersFetchData();
   }, []);
 
-  const createMeter = meters.map((obj: TMeter, index: number) => {
-    const areaMap = areas.find((el: TArea) => el.id === obj.area.id);
-    const newObj = { ...obj, ...areaMap } as TItem;
-    if (newObj) {
-      return <Item key={index} el={newObj} />;
-    }
+  const createMeter = meters
+    .map((obj: TMeter, index: number) => {
+      const areaMap = areas.find((el: TArea) => el.id === obj.area.id);
+      const newObj = { ...obj, ...areaMap } as TItem;
+      if (newObj) {
+        return <Item key={index} el={newObj} />;
+      }
 
-    return obj;
-  });
+      return null;
+    })
+    .filter(Boolean);
 
   return (
     <div>
