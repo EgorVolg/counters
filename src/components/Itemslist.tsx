@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import { TArea, TMeter } from "./types.ts";
+import { useEffect, useState } from "react";
+import { TArea, TItem, TMeter } from "./types.ts";
 import axios from "axios";
- import { NavItemsListMap } from "./NavItemsTopBar";
+import { NavItemsListMap } from "./NavItemsTopBar.tsx";
 import { useAreas } from "./hooks/useAreas.ts";
 import { Item } from "./Item.tsx";
 
 export const ItemsList = () => {
-  const [meters, setMeters] = React.useState<TMeter[]>([]);
+  const [meters, setMeters] = useState<TMeter[]>([]);
 
   const { areas } = useAreas();
 
@@ -17,18 +17,16 @@ export const ItemsList = () => {
     }
     metersFetchData();
   }, []);
-  console.log(areas, "areas");
-   
-    const createMeter = meters.map((obj: TMeter, index: number) => {
-      const areaMap = areas.find((el: TArea) => el.id === obj.area.id);
 
-      if (areaMap) {
-        const newObj = { ...obj, ...areaMap };
-        return <Item el={newObj} key={index} />;
-      }
+  const createMeter = meters.map((obj: TMeter, index: number) => {
+    const areaMap = areas.find((el: TArea) => el.id === obj.area.id);
+    const newObj = { ...obj, ...areaMap } as TItem;
+    if (newObj) {
+      return <Item key={index} el={newObj} />;
+    }
 
-      return obj;
-    });
+    return obj;
+  });
 
   return (
     <div>

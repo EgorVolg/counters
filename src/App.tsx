@@ -1,18 +1,18 @@
 import { useEffect } from "react";
-import { ItemsList } from "./components/Itemslist.tsx";
-import axios from "axios";
 import { useAction } from "./components/hooks/useAction.ts";
+import { useGetAreasQuery } from "./api/makeRequest.ts";
+import { ItemsList } from "./components/ItemsList.tsx";
 
 export const App = () => {
   const { updateAreas } = useAction();
+  const { data } = useGetAreasQuery({});
 
   useEffect(() => {
-    async function areasFetchData() {
-      const fetchRes = await axios.get("http://localhost:3000/areas");
-      updateAreas({ areas: fetchRes.data });
+    function areasFetchData() {
+      return updateAreas({ areas: data });
     }
     areasFetchData();
-  }, [ updateAreas ]);
+  }, [updateAreas, data]);
 
   return (
     <div className="block bg-[#F8F9FA]">
