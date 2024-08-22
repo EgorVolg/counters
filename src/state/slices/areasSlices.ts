@@ -5,7 +5,8 @@ export const areasSlice = createSlice({
     initialState: [],
     reducers: {
         updateAreas: (state, action) => {
-            return action.payload.areas
+            state = action.payload.areas
+            return state
         },
         default: () => console.log("error")
     },

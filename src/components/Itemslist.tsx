@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
-import { TArea, TMeter } from "./types.ts";
-import { Item } from "./Item.tsx";
+import { TMeter } from "./types.ts";
 import axios from "axios";
-import { useSelector } from "react-redux";
+import { useAreas } from "./hooks/useAreas.js";
+import { NavItemsListMap } from "./NavItemsTopBar";
 
 export const ItemsList = () => {
   const [meters, setMeters] = React.useState<TMeter[]>([]);
-  const areas = useSelector((state: TArea[]) => state);
-  console.log(areas);
+
+  const { areas } = useAreas();
 
   useEffect(() => {
     async function metersFetchData() {
@@ -16,42 +16,25 @@ export const ItemsList = () => {
     }
     metersFetchData();
   }, []);
+  console.log(areas, "areas");
+   
+  //   const createMeter = meters.map((obj: TMeter, index: number) => {
+  //     const areaMap = areas.find((el: TArea) => el.id === obj.area.id);
 
-  const navItemsList = [
-    { title: "№" },
-    { title: "Тип" },
-    { title: "Дата установки" },
-    { title: "Автоматический" },
-    { title: "Текущие показания" },
-    { title: "Адрес" },
-    { title: "Примечание" },
-  ];
+  //     if (areaMap) {
+  //       const newObj = { ...obj, ...areaMap };
+  //       return <Item el={newObj} key={index} />;
+  //     }
 
-  const navItemsListMap = () => {
-    return navItemsList.map((str: { title: string }, index: number) => (
-      <div className="p-1 bg-[#F0F3F7] text-neutral-500" key={index}>
-        {str.title}
-      </div>
-    ));
-  };
-
-  const createMeter = meters.map((obj: TMeter, index: number) => {
-    const areaMap = areas.find((el: TArea) => el.id === obj.area.id);
-
-    if (areaMap) {
-      const newObj = { ...obj, ...areaMap };
-      return <Item el={newObj} key={index} />;
-    }
-
-    return obj;
-  });
+  //     return obj;
+  //   });
 
   return (
     <div>
       <header className="grid grid-cols-[0.5fr_0.8fr_0.8fr_0.8fr_0.8fr_1.8fr_1.8fr] gap-[0px 0px] grid-flow-row">
-        {navItemsListMap()}
+        <NavItemsListMap />
       </header>
-      <main>{createMeter}</main>
+      {/* <main>{createMeter}</main> */}
     </div>
   );
 };

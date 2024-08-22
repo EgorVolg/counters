@@ -1,20 +1,18 @@
 import { useEffect } from "react";
 import { ItemsList } from "./components/Itemslist.tsx";
 import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
-import { updateAreas } from "./state/slices/areasSlices.ts";
- 
+import { useAction } from "./components/hooks/useAction.ts";
+
 export const App = () => {
-  const dispatch = useDispatch();
+  const { updateAreas } = useAction();
 
   useEffect(() => {
     async function areasFetchData() {
       const fetchRes = await axios.get("http://localhost:3000/areas");
-
-      dispatch(updateAreas({ areas: fetchRes.data }));
+      updateAreas({ areas: fetchRes.data });
     }
     areasFetchData();
-  }, [dispatch]);
+  }, [ updateAreas ]);
 
   return (
     <div className="block bg-[#F8F9FA]">
