@@ -42,7 +42,7 @@
       "area": {
         "id": "526237d1e0e34c524382c076"
       },
-      "is_automatic": null,
+      "is_automatic": "true",
       "communication": "5b20f6bb64c0360001ed10c7",
       "description": "207",
       "serial_number": "",
@@ -62,7 +62,7 @@
       "area": {
         "id": "526237d1e0e34c524382c078"
       },
-      "is_automatic": null,
+      "is_automatic": "false",
       "communication": "5b20f6bb64c0360001ed10c7",
       "description": "207",
       "serial_number": "",

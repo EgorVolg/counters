@@ -49,6 +49,7 @@ export const Item: React.FC<{ el: TItem }> = ({ el }) => {
 
   return (
     <div className="grid grid-cols-[0.6fr_0.8fr_0.8fr_0.8fr_0.8fr_1.8fr_1.8fr] gap-[0px 0px] grid-flow-row">
+      <div>1</div>
       <div>{getType()}</div>
       <div>{el.installation_date}</div>
       <div>{el.is_automatic}</div>
@@ -56,10 +57,10 @@ export const Item: React.FC<{ el: TItem }> = ({ el }) => {
       <div>{el.initial_values}</div>
       {/* <div>{el.area.id}</div> */}
       <div>{el.description}</div>
-      <div>
-        <div>{el.number}</div>
-        <div>{el.str_number}</div>
-        <div>{el.str_number_full}</div>
+      <div className="flex items-center">
+        <div>{el.number} </div>
+        <div>{el.str_number} </div>
+        <div>{el.str_number_full} </div>
       </div>
     </div>
   );

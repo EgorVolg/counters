@@ -1,10 +1,12 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { areasSlice } from "../slices/areasSlices";
+import { areasSlice } from "../slices/areasSlice";
 import { api } from "../../api/makeRequest";
+import { metersSlice } from "../slices/metersSlice";
 
 
 const reducers = combineReducers({
     areas: areasSlice.reducer,
+    meters: metersSlice.reducer,
     [api.reducerPath]: api.reducer
 
 })
