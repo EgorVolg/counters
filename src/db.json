@@ -33,26 +33,7 @@
     }
   ],
   "meters": [
-    {
-      "id": "526a0caae0e34c3e6dda9bcc",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c076"
-      },
-      "is_automatic": "true",
-      "communication": "5b20f6bb64c0360001ed10c7",
-      "description": "207",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        1
-      ]
-    },
+   
     {
       "id": "526a0caae0e34c3e6dda9bcc",
       "_type": [
