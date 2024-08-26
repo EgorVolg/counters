@@ -47,18 +47,26 @@ export const Item: React.FC<{ el: TItem }> = ({ el }) => {
     }
   };
 
+  const newDate = () => {
+    const str = el.installation_date;
+    const newStr = str.replace(/-/g, ".").
+
+    return newStr;
+  };
+
   return (
-    <tr>
+    <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
       <td>1</td>
       <td>{getType()}</td>
-      <td>{el.installation_date}</td>
-      <td>{el.is_automatic}</td>
-      {/* <div>{el.id}</div> */}
-      <td>{el.initial_values}</td>
-      {/* <div>{el.area.id}</div> */}
-      <td>{el.description}</td>
-      <td>{el.number} </td>
-      <td>{el.str_number} </td>
+      <td>{newDate()} </td>
+      <td>{el.is_automatic} </td>
+      <td>{el.description} </td>
+      <td className="">
+        <td>
+          {el.house.address} к. {el.number}
+        </td>
+        <td>{el.str_number} </td>
+      </td>
       <td>{el.str_number_full} </td>
     </tr>
   );

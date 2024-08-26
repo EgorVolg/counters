@@ -2,9 +2,51 @@
   "areas": [
     {
       "id": "526237d1e0e34c524382c076",
-      "number": 2,
-      "str_number": "2",
-      "str_number_full": "кв. 2",
+      "number": 1,
+      "str_number": "1",
+      "str_number_full": "кв. 1",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d1e0e34c524382c076",
+      "number": 1,
+      "str_number": "1",
+      "str_number_full": "кв. 1",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d1e0e34c524382c076",
+      "number": 1,
+      "str_number": "1",
+      "str_number_full": "кв. 1",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d1e0e34c524382c076",
+      "number": 1,
+      "str_number": "1",
+      "str_number_full": "кв. 1",
       "house": {
         "address": "г Санкт-Петербург, ул Чудес, д 256",
         "id": "526237d1e0e34c524382c073",
@@ -33,13 +75,9 @@
     }
   ],
   "meters": [
-   
     {
       "id": "526a0caae0e34c3e6dda9bcc",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
       "area": {
         "id": "526237d1e0e34c524382c078"
       },
@@ -50,9 +88,52 @@
       "installation_date": "2010-06-01T00:00:00",
       "brand_name": null,
       "model_name": null,
-      "initial_values": [
-        1
-      ]
+      "initial_values": [1]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9bcc",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d1e0e34c524382c078"
+      },
+      "is_automatic": "false",
+      "communication": "5b20f6bb64c0360001ed10c7",
+      "description": "207",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [1]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9bcc",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d1e0e34c524382c078"
+      },
+      "is_automatic": "false",
+      "communication": "5b20f6bb64c0360001ed10c7",
+      "description": "207",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [1]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9bcc",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d1e0e34c524382c078"
+      },
+      "is_automatic": "false",
+      "communication": "5b20f6bb64c0360001ed10c7",
+      "description": "207",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [1]
     }
   ]
 }
