@@ -47,16 +47,28 @@ export const Item: React.FC<{ el: TItem }> = ({ el }) => {
     }
   };
 
+  const isAutomatic = () => {
+    if (el.is_automatic === "null") {
+      return <div>Да</div>;
+    } else {
+      return <div>Нет</div>;
+    }
+  };
+
   return (
-    <tr>
+    <tr className="py-2 border-[6px 0px 6px 0px]">
+      {/* Border  0px, 0px, 1px, 0px
+Padding
+6px, 0px, 6px, 0px */}
+
       <td>1</td>
       <td>{getType()}</td>
       <td>{el.installation_date}</td>
-      <td>{el.is_automatic}</td>
+      <td>{isAutomatic()}</td>
       {/* <div>{el.id}</div> */}
       <td>{el.initial_values}</td>
       {/* <div>{el.area.id}</div> */}
-      <td>{el.description}</td>
+      {/* <td>{el.house.address}</td> */}
       <td>{el.number} </td>
       <td>{el.str_number} </td>
       <td>{el.str_number_full} </td>
