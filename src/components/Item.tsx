@@ -47,27 +47,33 @@ export const Item: React.FC<{ el: TItem }> = ({ el }) => {
     }
   };
 
-  const newDate = () => {
-    const str = el.installation_date;
-    const newStr = str.replace(/-/g, ".").
+  const isAutomatic = () => {
+    if (el.is_automatic === null) {
+      return "Не определён";
+    }
 
-    return newStr;
+    if (el.is_automatic === true) {
+      return "Автоматический";
+    } else {
+      return "Ручной";
+    }
   };
+  console.log(el.house);
 
   return (
-    <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+    <tr className="bg-white hover:bg-[#F7F8F9] border-b border-[#E0E5EB] border-solid">
       <td>1</td>
       <td>{getType()}</td>
-      <td>{newDate()} </td>
-      <td>{el.is_automatic} </td>
+      <td>{el.installation_date} </td>
+      <td>{isAutomatic()} </td>
       <td>{el.description} </td>
       <td className="">
-        <td>
-          {el.house.address} к. {el.number}
-        </td>
-        <td>{el.str_number} </td>
+        <td>{el.house.address}</td>
       </td>
-      <td>{el.str_number_full} </td>
+      <td>
+        {" "}
+        к. {el.number}, {el.str_number_full}{" "}
+      </td>
     </tr>
   );
 };

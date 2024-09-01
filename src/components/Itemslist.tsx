@@ -21,11 +21,11 @@ export const ItemsList = () => {
     .filter(Boolean);
 
   return (
-    <main className="w-full h-full p-2">
-      <table className="table-auto w-full h-auto ">
-        <thead>{NavItemsListMap()}</thead>
+    <main className="w-full h-screen">
+      <table className="table-auto w-full h-full border border-solid border-[#E0E5EB]">
+        <thead className="bg-[#E0E5EB] h-8">{NavItemsListMap()}</thead>
         <tbody className="">{createMeter}</tbody>
-        <tfoot>Hello world</tfoot>
+        <tfoot className="bg-white">Hello world</tfoot>
       </table>
     </main>
   );

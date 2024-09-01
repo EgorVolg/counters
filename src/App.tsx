@@ -21,13 +21,13 @@ export const App = () => {
   }, [updateAreas, updateMeters, dataAreas, dataMeters]);
 
   return (
-    <>
-      <header>
+    <div className="p-4 bg-green-50">
+      <header className="text-2xl">
         <strong>Список счётчиков</strong>
       </header>
-      <main>
+      <main className="w-full h-full">
         <ItemsList />
       </main>
-    </>
+    </div>
   );
 };
