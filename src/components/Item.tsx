@@ -58,6 +58,9 @@ export const Item: React.FC<{ el: TItem }> = ({ el }) => {
       return "Ручной";
     }
   };
+
+  console.log(el);
+  
   return (
     <tr className="bg-white hover:bg-[#E0E5EB] border border-[#E0E5EB] border-solid h-[52px]">
       <td className="p-4">1</td>
@@ -65,7 +68,7 @@ export const Item: React.FC<{ el: TItem }> = ({ el }) => {
       <td className="p-4">{el.installation_date} </td>
       <td className="p-4">{isAutomatic()} </td>
       <td className="p-4">{el.description} </td>
-      <td className="p-4">{el.house.address}</td>
+      <td className="p-4">{}</td>
       <td className="p-4">
         к. {el.number}, {el.str_number_full}
       </td>
