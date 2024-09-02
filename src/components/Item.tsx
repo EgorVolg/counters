@@ -58,21 +58,16 @@ export const Item: React.FC<{ el: TItem }> = ({ el }) => {
       return "Ручной";
     }
   };
-  console.log(el.house);
-
   return (
-    <tr className="bg-white hover:bg-[#F7F8F9] border-b border-[#E0E5EB] border-solid">
-      <td>1</td>
-      <td>{getType()}</td>
-      <td>{el.installation_date} </td>
-      <td>{isAutomatic()} </td>
-      <td>{el.description} </td>
-      <td className="">
-        <td>{el.house.address}</td>
-      </td>
-      <td>
-        {" "}
-        к. {el.number}, {el.str_number_full}{" "}
+    <tr className="bg-white hover:bg-[#E0E5EB] border border-[#E0E5EB] border-solid h-[52px]">
+      <td className="p-4">1</td>
+      <td className="p-4">{getType()}</td>
+      <td className="p-4">{el.installation_date} </td>
+      <td className="p-4">{isAutomatic()} </td>
+      <td className="p-4">{el.description} </td>
+      <td className="p-4">{el.house.address}</td>
+      <td className="p-4">
+        к. {el.number}, {el.str_number_full}
       </td>
     </tr>
   );

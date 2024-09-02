@@ -21,7 +21,7 @@ export const App = () => {
   }, [updateAreas, updateMeters, dataAreas, dataMeters]);
 
   return (
-    <div className="p-4 bg-green-50">
+    <div className="p-4 bg-neutral-50">
       <header className="text-2xl">
         <strong>Список счётчиков</strong>
       </header>

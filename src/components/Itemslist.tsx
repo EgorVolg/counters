@@ -13,19 +13,20 @@ export const ItemsList = () => {
       const areaMap = areas.find((el: TArea) => el.id === obj.area.id);
       const newObj = { ...obj, ...areaMap } as TItem;
       if (newObj) {
-        return <Item key={index} el={newObj} />;
+        return <Item key={index} el={newObj}  />;
       }
-
       return null;
     })
     .filter(Boolean);
 
   return (
     <main className="w-full h-screen">
-      <table className="table-auto w-full h-full border border-solid border-[#E0E5EB]">
-        <thead className="bg-[#E0E5EB] h-8">{NavItemsListMap()}</thead>
+      <table className="table-auto w-full border border-solid border-[#E0E5EB]">
+        <thead className="bg-[#E0E5EB] border border-solid border-[#E0E5EB]">
+          {NavItemsListMap()}
+        </thead>
         <tbody className="">{createMeter}</tbody>
-        <tfoot className="bg-white">Hello world</tfoot>
+        <tfoot className="">foooooter</tfoot>
       </table>
     </main>
   );
