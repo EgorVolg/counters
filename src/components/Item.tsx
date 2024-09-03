@@ -1,6 +1,25 @@
 import { TItem } from "./types.ts";
 import React from "react";
 
+const delsvg = (
+  <svg
+    width="40"
+    height="40"
+    viewBox="0 0 40 40"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect width="40" height="40" rx="8" fill="#FED7D7" />
+    <path d="M19.3333 18V24H18V18H19.3333Z" fill="#9B2C2C" />
+    <path d="M22 18V24H20.6666V18H22Z" fill="#9B2C2C" />
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M16.8528 12.6667H23.1472L23.8138 14.6667H26.6666V16H25.3333L24.6666 27.3334H15.3333L14.6666 16H13.3333V14.6667H16.1861L16.8528 12.6667ZM17.5916 14.6667H22.4084L22.1861 14H17.8138L17.5916 14.6667ZM16 16L16.6666 26H23.3333L24 16H16Z"
+      fill="#9B2C2C"
+    />
+  </svg>
+);
 export const Item: React.FC<{ el: TItem }> = ({ el }) => {
   const getType = () => {
     if (el._type[0] === "HotWaterAreaMeter") {
@@ -59,18 +78,27 @@ export const Item: React.FC<{ el: TItem }> = ({ el }) => {
     }
   };
 
-  console.log(el);
-  
+  const formateDate = () => {
+    const date = el.installation_date;
+    const year = date.slice(0, 4);
+    const month = date.slice(5, 7);
+    const day = date.slice(8, 10);
+    return `${day}.${month}.${year}`;
+  };
+
   return (
-    <tr className="bg-white hover:bg-[#E0E5EB] border border-[#E0E5EB] border-solid h-[52px]">
+    <tr className="bg-white transform duration-100 hover:bg-[#E0E5EB] border border-[#E0E5EB] border-solid h-[52px] group/item">
       <td className="p-4">1</td>
       <td className="p-4">{getType()}</td>
-      <td className="p-4">{el.installation_date} </td>
+      <td className="p-4">{formateDate()} </td>
       <td className="p-4">{isAutomatic()} </td>
       <td className="p-4">{el.description} </td>
-      <td className="p-4">{}</td>
-      <td className="p-4">
-        к. {el.number}, {el.str_number_full}
+      <td className="p-4 w-1/4">{"г Санкт-Петербург, ул Чудес, д 256"}</td>
+      <td className="p-4 w-1/4 ">
+        <div>
+          к. {el.number}, {el.str_number_full}
+        </div>
+        <button className="invisible absolute top-0 right-0 bottom-0 align-center px-1.5 group-hover/item:visible">{delsvg}</button>
       </td>
     </tr>
   );
