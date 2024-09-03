@@ -20,7 +20,10 @@ const delsvg = (
     />
   </svg>
 );
-export const Item: React.FC<{ el: TItem }> = ({ el }) => {
+export const Item: React.FC<{ el: TItem; onRemoveMeter: (id:string) => void }> = ({
+  el,
+  onRemoveMeter,
+}) => {
   const getType = () => {
     if (el._type[0] === "HotWaterAreaMeter") {
       return (
@@ -87,7 +90,10 @@ export const Item: React.FC<{ el: TItem }> = ({ el }) => {
   };
 
   return (
-    <tr className="bg-white transform duration-100 hover:bg-[#E0E5EB] border border-[#E0E5EB] border-solid h-[52px] group/item">
+    <tr
+      className="bg-white transform duration-100 hover:bg-[#E0E5EB] border border-[#E0E5EB] border-solid 
+    h-[52px] group/item"
+    >
       <td className="p-4">1</td>
       <td className="p-4">{getType()}</td>
       <td className="p-4">{formateDate()} </td>
@@ -98,7 +104,12 @@ export const Item: React.FC<{ el: TItem }> = ({ el }) => {
         <div>
           к. {el.number}, {el.str_number_full}
         </div>
-        <button className="invisible absolute top-0 right-0 bottom-0 align-center px-1.5 group-hover/item:visible">{delsvg}</button>
+        <button
+          className="invisible absolute top-0 right-0 bottom-0 align-center px-1.5 group-hover/item:visible"
+          onClick={() => onRemoveMeter(el.id)}
+        >
+          {delsvg}
+        </button>
       </td>
     </tr>
   );

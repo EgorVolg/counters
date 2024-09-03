@@ -15,6 +15,7 @@ export const App = () => {
     function metersFetchData() {
       return updateMeters({ meters: dataMeters });
     }
+ 
 
     metersFetchData();
     areasFetchData();
