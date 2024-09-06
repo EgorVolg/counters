@@ -15,17 +15,18 @@ export const App = () => {
     function metersFetchData() {
       return updateMeters({ meters: dataMeters });
     }
+ 
 
     metersFetchData();
     areasFetchData();
   }, [updateAreas, updateMeters, dataAreas, dataMeters]);
 
   return (
-    <div className="w-full h-full bg-neutral-50">
-      <header>
-        <strong className="text-neutral-800 ">Список счётчиков</strong>
+    <div className=" bg-neutral-50">
+      <header className="text-2xl pt-4 pl-4">
+        <strong>Список счётчиков</strong>
       </header>
-      <main>
+      <main className="w-full h-full p-4">
         <ItemsList />
       </main>
     </div>
