@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useAction } from "./components/hooks/useAction.ts";
 import { useGetAreasQuery, useGetMetersQuery } from "./api/makeRequest.ts";
-import { ItemsList } from "./components/ItemsList.tsx";
+import { ItemsList } from "./components/Itemslist.tsx";
 
 export const App = () => {
   const { updateAreas, updateMeters } = useAction();

@@ -10,6 +10,8 @@ const navItemsList = [
 
 export const NavItemsListMap = () => {
   return navItemsList.map((str: { title: string }, index: number) => (
-    <th key={index}>{str.title}</th>
+    <th key={index}>
+      <td>{str.title}</td>
+    </th>
   ));
 };

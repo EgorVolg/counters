@@ -47,30 +47,26 @@ export const Item: React.FC<{ el: TItem }> = ({ el }) => {
     }
   };
 
-  const isAutomatic = () => {
-    if (el.is_automatic === "null") {
-      return <div>Да</div>;
-    } else {
-      return <div>Нет</div>;
-    }
+  const newDate = () => {
+    const str = el.installation_date;
+    const newStr = str.replace(/-/g, ".").
+
+    return newStr;
   };
 
   return (
-    <tr className="py-2 border-[6px 0px 6px 0px]">
-      {/* Border  0px, 0px, 1px, 0px
-Padding
-6px, 0px, 6px, 0px */}
-
+    <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
       <td>1</td>
       <td>{getType()}</td>
-      <td>{el.installation_date}</td>
-      <td>{isAutomatic()}</td>
-      {/* <div>{el.id}</div> */}
-      <td>{el.initial_values}</td>
-      {/* <div>{el.area.id}</div> */}
-      {/* <td>{el.house.address}</td> */}
-      <td>{el.number} </td>
-      <td>{el.str_number} </td>
+      <td>{newDate()} </td>
+      <td>{el.is_automatic} </td>
+      <td>{el.description} </td>
+      <td className="">
+        <td>
+          {el.house.address} к. {el.number}
+        </td>
+        <td>{el.str_number} </td>
+      </td>
       <td>{el.str_number_full} </td>
     </tr>
   );
