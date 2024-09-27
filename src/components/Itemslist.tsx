@@ -20,8 +20,7 @@ export const ItemsList = () => {
       const newObj= { meter, area } as TItem
       return <Item key={index} el={newObj} onRemoveMeter={onRemoveMeter} />;
     }
-    return null
-  });
+   });
 
   return (
     <main className="w-full h-screen">
