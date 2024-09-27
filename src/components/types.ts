@@ -24,4 +24,7 @@ export type TArea = {
   };
 };
 
-export type TItem = TMeter & TArea;
+export type TItem = {
+  meter: TMeter;
+  area: TArea;
+}
