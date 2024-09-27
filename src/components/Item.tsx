@@ -25,7 +25,7 @@ export const Item: React.FC<{ el: TItem; onRemoveMeter: (id:string) => void }> =
   onRemoveMeter,
 }) => {
   const getType = () => {
-    if (el._type[0] === "HotWaterAreaMeter") {
+    if (el.meter._type[0] === "HotWaterAreaMeter") {
       return (
         <div className="flex items-center justify-start">
           <svg
@@ -48,7 +48,7 @@ export const Item: React.FC<{ el: TItem; onRemoveMeter: (id:string) => void }> =
         </div>
       );
     }
-    if (el._type[0] === "ColdWaterAreaMeter") {
+    if (el.meter._type[0] === "ColdWaterAreaMeter") {
       return (
         <div className="flex items-center justify-start">
           <svg
@@ -70,11 +70,11 @@ export const Item: React.FC<{ el: TItem; onRemoveMeter: (id:string) => void }> =
   };
 
   const isAutomatic = () => {
-    if (el.is_automatic === null) {
+    if (el.meter.is_automatic === null) {
       return "Не определён";
     }
 
-    if (el.is_automatic === true) {
+    if (el.meter.is_automatic === true) {
       return "Автоматический";
     } else {
       return "Ручной";
@@ -82,7 +82,7 @@ export const Item: React.FC<{ el: TItem; onRemoveMeter: (id:string) => void }> =
   };
 
   const formateDate = () => {
-    const date = el.installation_date;
+    const date = el.meter.installation_date;
     const year = date.slice(0, 4);
     const month = date.slice(5, 7);
     const day = date.slice(8, 10);
@@ -98,15 +98,15 @@ export const Item: React.FC<{ el: TItem; onRemoveMeter: (id:string) => void }> =
       <td className="p-4">{getType()}</td>
       <td className="p-4">{formateDate()} </td>
       <td className="p-4">{isAutomatic()} </td>
-      <td className="p-4">{el.description} </td>
+      <td className="p-4">{el.meter.description} </td>
       <td className="p-4 w-1/4">{"г Санкт-Петербург, ул Чудес, д 256"}</td>
       <td className="p-4 w-1/4 ">
         <div>
-          к. {el.number}, {el.str_number_full}
+          к. {el.area.number}, {el.area.str_number_full}
         </div>
         <button
           className="invisible absolute top-0 right-0 bottom-0 align-center px-1.5 group-hover/item:visible"
-          onClick={() => onRemoveMeter(el.id)}
+          onClick={() => onRemoveMeter(el.meter.id)}
         >
           {delsvg}
         </button>

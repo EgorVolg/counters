@@ -14,16 +14,14 @@ export const ItemsList = () => {
     removeItem(id);
   };
 
-  const createMeter = meters
-    .map((obj: TMeter, index: number) => {
-      const areaMap = areas.find((el: TArea) => el.id === obj.area.id);
-      const newObj = { ...obj, ...areaMap } as TItem;
-      if (newObj) {
-        return <Item key={index} el={newObj} onRemoveMeter={onRemoveMeter} />;
-      }
-      return null;
-    })
-    .filter(Boolean);
+  const createMeter = meters.map((meter: TMeter, index: number) => {
+    const area = areas.find((area: TArea) => area.id === meter.area.id);
+    if (area) {
+      const newObj= { meter, area } as TItem
+      return <Item key={index} el={newObj} onRemoveMeter={onRemoveMeter} />;
+    }
+    return null
+  });
 
   return (
     <main className="w-full h-screen">
