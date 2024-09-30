@@ -13,8 +13,8 @@ const delsvg = (
     <path d="M19.3333 18V24H18V18H19.3333Z" fill="#9B2C2C" />
     <path d="M22 18V24H20.6666V18H22Z" fill="#9B2C2C" />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M16.8528 12.6667H23.1472L23.8138 14.6667H26.6666V16H25.3333L24.6666 27.3334H15.3333L14.6666 16H13.3333V14.6667H16.1861L16.8528 12.6667ZM17.5916 14.6667H22.4084L22.1861 14H17.8138L17.5916 14.6667ZM16 16L16.6666 26H23.3333L24 16H16Z"
       fill="#9B2C2C"
     />
