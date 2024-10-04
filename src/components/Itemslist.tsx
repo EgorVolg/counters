@@ -28,8 +28,8 @@ export const ItemsList = () => {
   });
 
   return (
-    <main className="w-full h-screen">
-      <table className="table-auto w-full border border-solid border-[#E0E5EB]">
+    <main className="w-full h-full">
+      <table className=" w-full border border-solid border-[#E0E5EB]">
         <thead className="bg-[#E0E5EB] border border-solid border-[#E0E5EB]">
           {NavItemsListMap()}
         </thead>
