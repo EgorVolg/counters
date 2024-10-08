@@ -28,14 +28,16 @@ export const ItemsList = () => {
   });
 
   return (
-    <main className="w-full h-full">
-      <table className=" w-full border border-solid border-[#E0E5EB]">
-        <thead className="bg-[#E0E5EB] border border-solid border-[#E0E5EB]">
-          {NavItemsListMap()}
-        </thead>
-        <tbody className="">{createMeter}</tbody>
-        <tfoot className="">foooooter</tfoot>
-      </table>
+    <main>
+      <div className="overflow-auto max-h-[calc(100vh-120px)]">
+        <table className="w-full border border-solid border-[#E0E5EB]">
+          <thead>
+            <tr>{NavItemsListMap()}</tr>
+          </thead>
+          <tbody className="">{createMeter}</tbody>
+        </table>
+      </div>
+      <div className="">foooooter</div>
     </main>
   );
 };

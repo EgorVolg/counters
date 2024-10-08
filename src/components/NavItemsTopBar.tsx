@@ -10,7 +10,11 @@ const navItemsList = [
 
 export const NavItemsListMap = () => {
   return navItemsList.map((str: { title: string }, index: number) => (
-    <td key={index} className="p-4 font-semibold">
+    <td
+      key={index}
+      className="p-4 font-semibold
+       bg-[#E0E5EB] top-0 sticky z-[1]"
+    >
       {str.title}
     </td>
   ));
