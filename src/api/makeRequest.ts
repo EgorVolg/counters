@@ -13,7 +13,7 @@ export const api = createApi({
       providesTags: [{ type: "areas" }],
     }),
     getMeters: builder.query({
-      query: () => "/meters",
+      query: () => "/meters?_limit=20",
       providesTags: [{ type: "meters" }],
     }),
     removeItem: builder.mutation({
