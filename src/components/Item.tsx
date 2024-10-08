@@ -20,10 +20,10 @@ const delsvg = (
     />
   </svg>
 );
-export const Item: React.FC<{ el: TItem; onRemoveMeter: (id:string) => void }> = ({
-  el,
-  onRemoveMeter,
-}) => {
+export const Item: React.FC<{
+  el: TItem;
+  onRemoveMeter: (id: string) => void;
+}> = ({ el, onRemoveMeter }) => {
   const getType = () => {
     if (el.meter._type[0] === "HotWaterAreaMeter") {
       return (
@@ -91,17 +91,19 @@ export const Item: React.FC<{ el: TItem; onRemoveMeter: (id:string) => void }> =
 
   return (
     <tr
-      className="bg-white transform duration-100 hover:bg-[#E0E5EB] border border-[#E0E5EB] border-solid 
+      className="bg-white transform duration-100 hover:bg-[#E0E5EB] border-b border-[#E0E5EB] border-solid 
     h-[52px] group/item"
     >
-      <td className="p-4">1</td>
-      <td className="p-4">{getType()}</td>
-      <td className="p-4">{formateDate()} </td>
-      <td className="p-4">{isAutomatic()} </td>
-      <td className="p-4">{el.meter.description} </td>
-      <td className="p-4 w-1/4">{"г Санкт-Петербург, ул Чудес, д 256"}</td>
-      <td className="p-4 w-1/4 ">
-        <div>
+      <td className="p-4 text-gray-900">1</td>
+      <td className="p-4  text-gray-900">{getType()}</td>
+      <td className="p-4  text-gray-900">{formateDate()} </td>
+      <td className="p-4  text-gray-900">{isAutomatic()} </td>
+      <td className="p-4  text-gray-900">{el.meter.description} </td>
+      <td className="p-4  text-gray-900 w-1/4">
+        {"г Санкт-Петербург, ул Чудес, д 256"}
+      </td>
+      <td className="p-4  text-gray-900 w-1/4 ">
+        <div className="text-gray-700">
           к. {el.area.number}, {el.area.str_number_full}
         </div>
         <button

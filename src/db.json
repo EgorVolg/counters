@@ -1803,26 +1803,6 @@
       ]
     },
     {
-      "id": "526a0caae0e34c3e6dda9ab5",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c096"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0d9e",
-      "description": "13",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        51
-      ]
-    },
-    {
       "id": "526a0caae0e34c3e6dda9ab6",
       "_type": [
         "ColdWaterAreaMeter",

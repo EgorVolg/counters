@@ -29,15 +29,15 @@ export const ItemsList = () => {
 
   return (
     <main>
-      <div className="overflow-auto max-h-[calc(100vh-120px)]">
-        <table className="w-full border border-solid border-[#E0E5EB]">
-          <thead>
+      <div className="overflow-auto max-h-[calc(100vh-120px)]  border border-solid border-gray-300 rounded-t-lg">
+        <table className="w-full">
+          <thead className="">
             <tr>{NavItemsListMap()}</tr>
           </thead>
           <tbody className="">{createMeter}</tbody>
         </table>
       </div>
-      <div className="">foooooter</div>
+      <div className="border border-solid border-gray-200 px-2 rounded-b-lg">foooooter</div>
     </main>
   );
 };

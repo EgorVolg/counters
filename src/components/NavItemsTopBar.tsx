@@ -12,8 +12,8 @@ export const NavItemsListMap = () => {
   return navItemsList.map((str: { title: string }, index: number) => (
     <td
       key={index}
-      className="p-4 font-semibold
-       bg-[#E0E5EB] top-0 sticky z-[1]"
+      className="p-2 font-semibold text-neutral-500
+       bg-[#F0F3F7] top-0 sticky z-[1] font-roboto"
     >
       {str.title}
     </td>
