@@ -7,7 +7,8 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "roboto", sans-serif;
- }
+  overflow: hidden;
+}
 
 ::-webkit-scrollbar {
   width: 5px;
@@ -24,4 +25,15 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: #5e6674;
+}
+
+.paginationButton {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #ced5de;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #1f2939;
+  margin-right: 4px;
 }
