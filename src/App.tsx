@@ -22,7 +22,7 @@ export const App = () => {
   }, [updateAreas, updateMeters, dataAreas, dataMeters]);
 
   return (
-    <div className=" bg-neutral-50">
+    <div className=" bg-neutral-50 ">
       <header className="text-2xl pt-4 pl-4">
         <strong>Список счётчиков</strong>
       </header>

@@ -7,12 +7,8 @@ import {
   useGetMetersQuery,
   useRemoveItemMutation,
 } from "../api/makeRequest.ts";
-import {TableFooter} from "./TableFooter.tsx";
-import { useState } from "react";
 
 export const ItemsList = () => {
-  const [pageNumber, setPageNumber] = useState(1);
-
   const { meters } = useMeters();
   const { areas } = useAreas();
 
@@ -41,9 +37,7 @@ export const ItemsList = () => {
           <tbody className="">{createMeter}</tbody>
         </table>
       </div>
-      <div className="border border-solid border-gray-200 min-h-8 rounded-b-lg">
-        <TableFooter />
-      </div>
+      <div className="border border-solid border-gray-200 px-2 rounded-b-lg">foooooter</div>
     </main>
   );
 };
