@@ -1,5 +1,5 @@
 import { TArea, TItem, TMeter } from "./types.ts";
-import { NavItemsListMap } from "./NavItemsTopBar.tsx";
+import { NavItemsListMap, TableHeader } from "./TableHeader.tsx";
 import { useAreas } from "./hooks/useAreas.ts";
 import { Item } from "./Item.tsx";
 import { useMeters } from "./hooks/useMeters.ts";
@@ -33,10 +33,10 @@ export const ItemsList = () => {
 
   return (
     <main>
-      <div className="overflow-auto max-h-[calc(100vh-120px)]  border border-solid border-gray-300 rounded-t-lg">
+      <div className="overflow-y-auto max-h-[calc(100vh-120px)]  border border-solid border-gray-300 rounded-t-lg">
         <table className="w-full">
           <thead className="">
-            <tr>{NavItemsListMap()}</tr>
+            <tr><TableHeader /></tr>
           </thead>
           <tbody className="">{createMeter}</tbody>
         </table>

@@ -8,7 +8,7 @@ const navItemsList = [
   { title: "Примечание" },
 ];
 
-export const NavItemsListMap = () => {
+export const TableHeader = () => {
   return navItemsList.map((str: { title: string }, index: number) => (
     <td
       key={index}

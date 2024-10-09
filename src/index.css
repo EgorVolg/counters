@@ -7,7 +7,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "roboto", sans-serif;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 ::-webkit-scrollbar {
