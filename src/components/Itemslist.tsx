@@ -23,6 +23,10 @@ export const ItemsList = () => {
     refetchMeters(dataMeters);
   };
 
+  const handlePageChange = (pageNumber: number) => {
+    setPageNumber(pageNumber);
+  }
+
   const createMeter = meters.map((meter: TMeter, index: number) => {
     const area = areas.find((area: TArea) => area.id === meter.area.id);
     if (area) {
@@ -30,7 +34,7 @@ export const ItemsList = () => {
       return <Item key={index} el={newObj} onRemoveMeter={onRemoveMeter} />;
     }
   });
-
+ 
   return (
     <main>
       <div className="overflow-y-auto max-h-[calc(100vh-120px)]  border border-solid border-gray-300 rounded-t-lg">
@@ -42,7 +46,7 @@ export const ItemsList = () => {
         </table>
       </div>
       <div className="border border-solid border-gray-200 min-h-8 rounded-b-lg">
-        <TableFooter />
+        <TableFooter handlePageChange={handlePageChange}/>
       </div>
     </main>
   );
