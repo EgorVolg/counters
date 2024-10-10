@@ -27,6 +27,9 @@ export const ItemsList = () => {
     setPageNumber(pageNumber);
   }
 
+  console.log(meters.results);
+  
+
   const createMeter = meters.map((meter: TMeter, index: number) => {
     const area = areas.find((area: TArea) => area.id === meter.area.id);
     if (area) {

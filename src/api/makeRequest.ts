@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const API_URL = "http://localhost:3000";
+const API_URL = "http://showroom.eis24.me/api/v4/test";
 export const api = createApi({
   reducerPath: "api",
   tagTypes: ["areas", "meters"],
@@ -13,7 +13,7 @@ export const api = createApi({
       providesTags: [{ type: "areas" }],
     }),
     getMeters: builder.query({
-      query: () => "/meters?_limit=20",
+      query: () => "/meters?limit=20&offset=20",
       providesTags: [{ type: "meters" }],
     }),
     removeItem: builder.mutation({
