@@ -1403,1964 +1403,1504 @@
   ],
   "meters": [
     {
-      "id": "526a0caae0e34c3e6dda9ba8",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
+      "id": "526a0caae0e34c3e6dda9c40",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c174"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6bc64c0360001ed1113",
+      "description": "239",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [142]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c4f",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c17c"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6bc64c0360001ed111a",
+      "description": "108",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [267]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c52",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c17c"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6a964c0360001ed0f6b",
+      "description": "243",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [144]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c66",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c186"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6bc64c0360001ed1125",
+      "description": "249",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [170]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c6c",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c188"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6bc64c0360001ed1126",
+      "description": "116",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [83]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c6d",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c188"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6a964c0360001ed0f82",
+      "description": "117",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [345]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c6e",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c188"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6a964c0360001ed0f83",
+      "description": "250",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [197]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c6f",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c188"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6bc64c0360001ed1127",
+      "description": "251",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [54]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c92",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d4e0e34c524382c1a5"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6bc64c0360001ed1147",
+      "description": "256",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [412]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c93",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d4e0e34c524382c1a5"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6a964c0360001ed0fbb",
+      "description": "257",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [0]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c97",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d4e0e34c524382c1a7"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6bc64c0360001ed114b",
+      "description": "258",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [22]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c9b",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d4e0e34c524382c1a9"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6bc64c0360001ed114e",
+      "description": "126",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [23]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c9c",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d4e0e34c524382c1a9"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6bc64c0360001ed114f",
+      "description": "127",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [120]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c9d",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d4e0e34c524382c1a9"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6bc64c0360001ed1150",
+      "description": "260",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [25]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c9e",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d4e0e34c524382c1a9"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6a964c0360001ed0fc3",
+      "description": "261",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [46]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9ca3",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d4e0e34c524382c1af"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6a964c0360001ed0fce",
+      "description": "128",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [0]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9ca6",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d4e0e34c524382c1af"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6bc64c0360001ed1153",
+      "description": "263",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [0]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9b89",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d2e0e34c524382c10e"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6ba64c0360001ed1099",
+      "description": "191",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [131]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c2c",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c16c"
+      },
+      "is_automatic": false,
+      "communication": "5b20f6a864c0360001ed0f4a",
+      "description": "100",
+      "serial_number": "1",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": "нева",
+      "model_name": "00",
+      "initial_values": [730]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c4c",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c17a"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6a964c0360001ed0f66",
+      "description": "107",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [47]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c4d",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c17a"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6bc64c0360001ed1119",
+      "description": "240",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [40]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c4e",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c17a"
+      },
+      "is_automatic": false,
+      "communication": "5b20f6a964c0360001ed0f67",
+      "description": "241",
+      "serial_number": "111",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [118]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c57",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c17e"
+      },
+      "is_automatic": false,
+      "communication": "5b20f6bc64c0360001ed111c",
+      "description": "110",
+      "serial_number": "0916690",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": "15",
+      "model_name": "СГВ",
+      "initial_values": [706]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c58",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c17e"
+      },
+      "is_automatic": false,
+      "communication": "5b20f6a964c0360001ed0f6e",
+      "description": "111",
+      "serial_number": "0967427",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": "15",
+      "model_name": "СГВ",
+      "initial_values": [101]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c59",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c17e"
+      },
+      "is_automatic": false,
+      "communication": "5b20f6bc64c0360001ed111d",
+      "description": "244",
+      "serial_number": "1069456",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": "Г15",
+      "model_name": "СГВ",
+      "initial_values": [78]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c5a",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c17e"
+      },
+      "is_automatic": false,
+      "communication": "5b20f6a964c0360001ed0f6f",
+      "description": "245",
+      "serial_number": "1068634",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": "15",
+      "model_name": "СГВ",
+      "initial_values": [296]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c74",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c190"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6bc64c0360001ed1131",
+      "description": "118",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [558]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c75",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c190"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6a964c0360001ed0f92",
+      "description": "119",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [172]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c76",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c190"
+      },
+      "is_automatic": false,
+      "communication": "5b20f6bc64c0360001ed1132",
+      "description": "252",
+      "serial_number": "6834371",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": "Метер",
+      "model_name": "00",
+      "initial_values": [249]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c77",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c190"
+      },
+      "is_automatic": false,
+      "communication": "5b20f6a964c0360001ed0f93",
+      "description": "253",
+      "serial_number": "7176236",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": "Метер",
+      "model_name": "00",
+      "initial_values": [158]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9b01",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d2e0e34c524382c0c0"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6b964c0360001ed1030",
+      "description": "29",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [207]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9b59",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d2e0e34c524382c0ec"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6ba64c0360001ed1075",
+      "description": "48",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [72]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9b5a",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d2e0e34c524382c0ec"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6a864c0360001ed0e4a",
+      "description": "49",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [535]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9b63",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d2e0e34c524382c0f2"
+      },
+      "is_automatic": false,
+      "communication": "5b20f6ba64c0360001ed107d",
+      "description": "52",
+      "serial_number": "001",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": "нева",
+      "model_name": "00",
+      "initial_values": [66]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9b64",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d2e0e34c524382c0f2"
+      },
+      "is_automatic": false,
+      "communication": "5b20f6ba64c0360001ed107e",
+      "description": "53",
+      "serial_number": "002",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": "нева",
+      "model_name": "00",
+      "initial_values": [391]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9bed",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c14c"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6bb64c0360001ed10db",
+      "description": "81",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [14]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9bee",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c14c"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6a864c0360001ed0f0a",
+      "description": "82",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [132]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9bef",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c14c"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6bb64c0360001ed10dc",
+      "description": "215",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [61]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9bf0",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c14c"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6a864c0360001ed0f0b",
+      "description": "216",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [16]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9bf9",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c154"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6a864c0360001ed0f1a",
+      "description": "87",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [1]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9bfa",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c154"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6bb64c0360001ed10e5",
+      "description": "88",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [2]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9bfd",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c154"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6a864c0360001ed0f1b",
+      "description": "221",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [1]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9bfe",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c154"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6bb64c0360001ed10e8",
+      "description": "222",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [2]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c24",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c168"
+      },
+      "is_automatic": false,
+      "communication": "5b20f6bb64c0360001ed1100",
+      "description": "98",
+      "serial_number": "0483252",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": "METER",
+      "model_name": "СВ-15",
+      "initial_values": [48]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c25",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c168"
+      },
+      "is_automatic": false,
+      "communication": "5b20f6a864c0360001ed0f42",
+      "description": "",
+      "serial_number": "0483242",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": "METER",
+      "model_name": "СВ-15 Х",
+      "initial_values": [14]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c26",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c168"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6bb64c0360001ed1103",
+      "description": "232",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [68]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c27",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c168"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6bc64c0360001ed1104",
+      "description": "233",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [26]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c33",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c170"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6bc64c0360001ed110c",
+      "description": "102",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [71]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c34",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c170"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6a864c0360001ed0f52",
+      "description": "103",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [655]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c95",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d4e0e34c524382c1a7"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6bc64c0360001ed1149",
+      "description": "124",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [21]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9b3c",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d2e0e34c524382c0de"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6a864c0360001ed0e2e",
+      "description": "41",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [48]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9bb6",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c136"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6bb64c0360001ed10bc",
+      "description": "203",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [39]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9bb7",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c136"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6a864c0360001ed0edf",
+      "description": "204",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [0]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9b8a",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d2e0e34c524382c10e"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6ba64c0360001ed109a",
+      "description": "192",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [171]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9a89",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d1e0e34c524382c07a"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6b664c0360001ed0fd8",
+      "description": "3",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [81]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9a8a",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d1e0e34c524382c07a"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6a864c0360001ed0d66",
+      "description": "4",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [630]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c1e",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c164"
+      },
+      "is_automatic": false,
+      "communication": "5b20f6bb64c0360001ed10fc",
+      "description": "96",
+      "serial_number": "1",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": "нева",
+      "model_name": "00",
+      "initial_values": [63]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c1f",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c164"
+      },
+      "is_automatic": false,
+      "communication": "5b20f6a864c0360001ed0f3a",
+      "description": "97",
+      "serial_number": "2",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": "нева",
+      "model_name": "00",
+      "initial_values": [21]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9b8f",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d2e0e34c524382c110"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6ba64c0360001ed109d",
+      "description": "193",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [0]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9b91",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d2e0e34c524382c110"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6a864c0360001ed0e93",
+      "description": "195",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [0]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9b94",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d2e0e34c524382c112"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6ba64c0360001ed109f",
+      "description": "62",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [35]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9b95",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d2e0e34c524382c112"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6a864c0360001ed0e96",
+      "description": "63",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [138]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9ba9",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
       "area": {
         "id": "526237d3e0e34c524382c12c"
       },
-      "is_automatic": "false",
+      "is_automatic": null,
+      "communication": "5b20f6bb64c0360001ed10b3",
+      "description": "67",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [16]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9bca",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c142"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6bb64c0360001ed10c6",
+      "description": "73",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [81]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9bcb",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c142"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6a864c0360001ed0ef6",
+      "description": "74",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [291]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9bcc",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c142"
+      },
+      "is_automatic": null,
       "communication": "5b20f6bb64c0360001ed10c7",
       "description": "207",
       "serial_number": "",
       "installation_date": "2010-06-01T00:00:00",
       "brand_name": null,
       "model_name": null,
-      "initial_values": [
-        125
-      ]
+      "initial_values": [103]
     },
     {
-      "id": "526a0caae0e34c3e6dda9a82",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
+      "id": "526a0caae0e34c3e6dda9bcd",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
       "area": {
-        "id": "526237d1e0e34c524382c074"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0d5a",
-      "description": "2",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        41
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9a83",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c074"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6b664c0360001ed0fd3",
-      "description": "130",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        44
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9a84",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c074"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0d5b",
-      "description": "131",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        96
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9a8b",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c07a"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6b664c0360001ed0fd9",
-      "description": "132",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        201
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9a8c",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c07a"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0d67",
-      "description": "133",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        459
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9a8f",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c07c"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0d6a",
-      "description": "5",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        0
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9a90",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c07c"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0d6b",
-      "description": "134",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        0
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9a91",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c07e"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0d6e",
-      "description": "6",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        0
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9a92",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c07e"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0d6f",
-      "description": "135",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        0
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9a9b",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c08c"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6b764c0360001ed0fe4",
-      "description": "7",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        36
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9a9c",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c08c"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0d8a",
-      "description": "8",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        270
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9a9d",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c08c"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6b764c0360001ed0fe5",
-      "description": "136",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        292
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9a9e",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c08c"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0d8b",
-      "description": "137",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        32
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9aa9",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c090"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6b764c0360001ed0fee",
-      "description": "138",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        179
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9aaa",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c090"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6b764c0360001ed0fef",
-      "description": "139",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        380
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9aad",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c092"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6b764c0360001ed0ff0",
-      "description": "11",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        145
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9aae",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c092"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0d96",
-      "description": "12",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        32
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9aaf",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c092"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6b764c0360001ed0ff1",
-      "description": "142",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        82
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9ab0",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c092"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0d97",
-      "description": "143",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        42
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9ab6",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c096"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0d9e",
-      "description": "14",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        119
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9ab7",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c096"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6b864c0360001ed0ff4",
-      "description": "144",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        55
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9ab8",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c096"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0d9f",
-      "description": "145",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        108
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9abd",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c098"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6b964c0360001ed0ff8",
-      "description": "15",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        315
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9abe",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c098"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6b964c0360001ed0ff9",
-      "description": "16",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        65
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9abf",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c098"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6b964c0360001ed0ffb",
-      "description": "146",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        299
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9ac0",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c098"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6b964c0360001ed0ffc",
-      "description": "147",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        140
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9ac5",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c09a"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6b964c0360001ed0ffd",
-      "description": "17",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        370
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9ac6",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c09a"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0da6",
-      "description": "18",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        103
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9ac8",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c09a"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0da7",
-      "description": "149",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        255
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9adc",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c0a6"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0dbe",
-      "description": "22",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        0
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9adb",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c0a6"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6b964c0360001ed1011",
-      "description": "21",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        158
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9add",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c0a6"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6b964c0360001ed1012",
-      "description": "152",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        124
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9ade",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d1e0e34c524382c0a6"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0dbf",
-      "description": "153",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        0
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9aef",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0b6"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6b964c0360001ed1023",
-      "description": "23",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        252
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9af0",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0b6"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0dde",
-      "description": "24",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        79
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9af1",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0b6"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6b964c0360001ed1024",
-      "description": "154",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        208
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9af2",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0b6"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0ddf",
-      "description": "155",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        59
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9afd",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0ba"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6b964c0360001ed1029",
-      "description": "158",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        38
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9afe",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0ba"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6b964c0360001ed102a",
-      "description": "159",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        239
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b03",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0c0"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6b964c0360001ed1032",
-      "description": "160",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        69
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b04",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0c0"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0df3",
-      "description": "161",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        77
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b08",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0c4"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6b964c0360001ed1037",
-      "description": "31",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        122
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b09",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0c4"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0dfa",
-      "description": "32",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        32
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b0a",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0c4"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6b964c0360001ed103a",
-      "description": "162",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        81
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b0b",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0c4"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6b964c0360001ed103b",
-      "description": "163",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        58
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b10",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0c8"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6b964c0360001ed103c",
-      "description": "33",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        37
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b11",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0c8"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0e02",
-      "description": "34",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        8
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b12",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0c8"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6b964c0360001ed103e",
-      "description": "164",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        5
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b13",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0c8"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6b964c0360001ed103f",
-      "description": "165",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        15
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b20",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0ce"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6ba64c0360001ed1049",
-      "description": "35",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        78
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b21",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0ce"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0e0e",
-      "description": "36",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        293
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b22",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0ce"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6ba64c0360001ed104b",
-      "description": "166",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        158
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b23",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0ce"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0e0f",
-      "description": "167",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        75
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b2c",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0d2"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6ba64c0360001ed1050",
-      "description": "37",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        324
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b2d",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0d2"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0e16",
-      "description": "38",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        49
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b2e",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0d2"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6ba64c0360001ed1052",
-      "description": "168",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        91
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b2f",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0d2"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6ba64c0360001ed1053",
-      "description": "169",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        261
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b3d",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0de"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6ba64c0360001ed105f",
-      "description": "42",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        118
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b3e",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0de"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6ba64c0360001ed1060",
-      "description": "172",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        84
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b3f",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0de"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0e2f",
-      "description": "173",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        49
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b48",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0e6"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6ba64c0360001ed106a",
-      "description": "43",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        114
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b49",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0e6"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6ba64c0360001ed106b",
-      "description": "44",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        206
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b4a",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0e6"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6ba64c0360001ed106c",
-      "description": "45",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        123
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b4b",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0e6"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6ba64c0360001ed106e",
-      "description": "174",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        137
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b4c",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0e6"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6ba64c0360001ed106f",
-      "description": "175",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        245
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b4d",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0e6"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6ba64c0360001ed1070",
-      "description": "176",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        0
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b51",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0ea"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6ba64c0360001ed1073",
-      "description": "46",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        361
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b52",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0ea"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0e46",
-      "description": "47",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        41
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b53",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0ea"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6ba64c0360001ed1074",
-      "description": "177",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        80
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b54",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0ea"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0e47",
-      "description": "178",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        65
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b5b",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0ec"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6ba64c0360001ed1076",
-      "description": "179",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        146
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b5d",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0ec"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0e4b",
-      "description": "181",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        91
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b65",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0f2"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6ba64c0360001ed107f",
-      "description": "185",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        72
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b66",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c0f2"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6ba64c0360001ed1080",
-      "description": "186",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        230
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b7d",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c106"
+        "id": "526237d3e0e34c524382c142"
       },
       "is_automatic": false,
-      "communication": "5b20f6ba64c0360001ed1090",
-      "description": "54",
+      "communication": "5b20f6a864c0360001ed0ef7",
+      "description": "208",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [143]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9be7",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c14a"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6bb64c0360001ed10d9",
+      "description": "79",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [41]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9be8",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c14a"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6a864c0360001ed0f06",
+      "description": "80",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [233]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c16",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c15e"
+      },
+      "is_automatic": false,
+      "communication": "5b20f6bb64c0360001ed10f8",
+      "description": "93",
+      "serial_number": "001",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": "нева",
+      "model_name": "00",
+      "initial_values": [59]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c18",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c15e"
+      },
+      "is_automatic": false,
+      "communication": "5b20f6a864c0360001ed0f2f",
+      "description": "227",
+      "serial_number": "002",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": "нева",
+      "model_name": "00",
+      "initial_values": [14]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c3d",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c174"
+      },
+      "is_automatic": false,
+      "communication": "5b20f6bc64c0360001ed1110",
+      "description": "104",
+      "serial_number": "237395",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": "Х-15/1,5",
+      "model_name": "НАРВА",
+      "initial_values": [402]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c3e",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c174"
+      },
+      "is_automatic": false,
+      "communication": "5b20f6a864c0360001ed0f5a",
+      "description": "105",
+      "serial_number": "237396",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": "Х-15/1.5",
+      "model_name": "НАРВА",
+      "initial_values": [116]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c90",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d4e0e34c524382c1a5"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6a964c0360001ed0fba",
+      "description": "122",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [614]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9b5f",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d2e0e34c524382c0ee"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6a864c0360001ed0e4e",
+      "description": "50",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [22]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9b60",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d2e0e34c524382c0ee"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6ba64c0360001ed1079",
+      "description": "51",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [218]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9b61",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d2e0e34c524382c0ee"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6ba64c0360001ed107b",
+      "description": "183",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [44]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9b62",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d2e0e34c524382c0ee"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6ba64c0360001ed107c",
+      "description": "184",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [139]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9ad3",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d1e0e34c524382c0a2"
+      },
+      "is_automatic": false,
+      "communication": "5b20f6b964c0360001ed100b",
+      "description": "19",
+      "serial_number": "12",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": "нева",
+      "model_name": "00",
+      "initial_values": [42]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9ad4",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d1e0e34c524382c0a2"
+      },
+      "is_automatic": false,
+      "communication": "5b20f6b964c0360001ed100c",
+      "description": "20",
+      "serial_number": "123",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": "нева",
+      "model_name": "00",
+      "initial_values": [185]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9af7",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d2e0e34c524382c0b8"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6b964c0360001ed1025",
+      "description": "25",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [146]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9af8",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d2e0e34c524382c0b8"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6a864c0360001ed0de2",
+      "description": "26",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [42]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9af9",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d2e0e34c524382c0b8"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6b964c0360001ed1026",
+      "description": "156",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [86]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9afa",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d2e0e34c524382c0b8"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6a864c0360001ed0de3",
+      "description": "157",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [187]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c5f",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c184"
+      },
+      "is_automatic": false,
+      "communication": "5b20f6bc64c0360001ed1120",
+      "description": "112",
+      "serial_number": "9204",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": "1",
+      "model_name": "METERS",
+      "initial_values": [36]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c60",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c184"
+      },
+      "is_automatic": false,
+      "communication": "5b20f6a964c0360001ed0f7a",
+      "description": "113",
+      "serial_number": "9190",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": "1",
+      "model_name": "METERS",
+      "initial_values": [102]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c61",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c184"
+      },
+      "is_automatic": false,
+      "communication": "5b20f6bc64c0360001ed1121",
+      "description": "246",
+      "serial_number": "694310",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": "K",
+      "model_name": "METERS",
+      "initial_values": [37]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c62",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c184"
+      },
+      "is_automatic": false,
+      "communication": "5b20f6a964c0360001ed0f7b",
+      "description": "247",
+      "serial_number": "694413",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": "V",
+      "model_name": "METERS",
+      "initial_values": [39]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9b02",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d2e0e34c524382c0c0"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6a864c0360001ed0df2",
+      "description": "30",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [47]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9ca5",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d4e0e34c524382c1af"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6a964c0360001ed0fcf",
+      "description": "262",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [326]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9ca4",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d4e0e34c524382c1af"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6bc64c0360001ed1152",
+      "description": "129",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [599]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c1d",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c162"
+      },
+      "is_automatic": false,
+      "communication": "5b20f6a864c0360001ed0f37",
+      "description": "229",
+      "serial_number": "с 1672266/10",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": "METER",
+      "model_name": "СВ-15 Г",
+      "initial_values": [23]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c1c",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d3e0e34c524382c162"
+      },
+      "is_automatic": false,
+      "communication": "5b20f6a864c0360001ed0f36",
+      "description": "95",
+      "serial_number": "с 1657027/10",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": "МЕТЕР",
+      "model_name": "СВ-15 Х",
+      "initial_values": [22]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c78",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d4e0e34c524382c195"
+      },
+      "is_automatic": false,
+      "communication": "5b20f6bc64c0360001ed1135",
+      "description": "120",
       "serial_number": "1",
       "installation_date": "2010-06-01T00:00:00",
-      "brand_name": "бекар",
+      "brand_name": "нева",
       "model_name": "00",
-      "initial_values": [
-        144
-      ]
+      "initial_values": [28]
     },
     {
-      "id": "526a0caae0e34c3e6dda9b7e",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
+      "id": "526a0caae0e34c3e6dda9c79",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
       "area": {
-        "id": "526237d2e0e34c524382c106"
+        "id": "526237d4e0e34c524382c195"
       },
       "is_automatic": false,
-      "communication": "5b20f6a864c0360001ed0e7e",
-      "description": "55",
+      "communication": "5b20f6bc64c0360001ed1136",
+      "description": "121",
       "serial_number": "2",
       "installation_date": "2010-06-01T00:00:00",
-      "brand_name": "бекар",
+      "brand_name": "нева",
       "model_name": "00",
-      "initial_values": [
-        135
-      ]
+      "initial_values": [64]
     },
     {
-      "id": "526a0caae0e34c3e6dda9b7f",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
+      "id": "526a0caae0e34c3e6dda9c7a",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
       "area": {
-        "id": "526237d2e0e34c524382c106"
+        "id": "526237d4e0e34c524382c195"
+      },
+      "is_automatic": false,
+      "communication": "5b20f6bc64c0360001ed1137",
+      "description": "254",
+      "serial_number": "3",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": "нева",
+      "model_name": "00",
+      "initial_values": [4]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9c7b",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d4e0e34c524382c195"
+      },
+      "is_automatic": false,
+      "communication": "5b20f6bc64c0360001ed1138",
+      "description": "255",
+      "serial_number": "4",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": "нева",
+      "model_name": "00",
+      "initial_values": [33]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9aa7",
+      "_type": ["ColdWaterAreaMeter", "AreaMeter"],
+      "area": {
+        "id": "526237d1e0e34c524382c090"
       },
       "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0e7f",
-      "description": "187",
+      "communication": "5b20f6b764c0360001ed0feb",
+      "description": "9",
       "serial_number": "",
       "installation_date": "2010-06-01T00:00:00",
       "brand_name": null,
       "model_name": null,
-      "initial_values": [
-        57
-      ]
+      "initial_values": [461]
     },
     {
-      "id": "526a0caae0e34c3e6dda9b80",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
+      "id": "526a0caae0e34c3e6dda9aab",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
       "area": {
-        "id": "526237d2e0e34c524382c106"
+        "id": "526237d1e0e34c524382c090"
       },
       "is_automatic": null,
-      "communication": "5b20f6ba64c0360001ed1092",
-      "description": "188",
+      "communication": "5b20f6b764c0360001ed0fed",
+      "description": "140",
       "serial_number": "",
       "installation_date": "2010-06-01T00:00:00",
       "brand_name": null,
       "model_name": null,
-      "initial_values": [
-        64
-      ]
+      "initial_values": [0]
     },
     {
-      "id": "526a0caae0e34c3e6dda9b8d",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
+      "id": "526a0caae0e34c3e6dda9aac",
+      "_type": ["HotWaterAreaMeter", "AreaMeter"],
       "area": {
-        "id": "526237d2e0e34c524382c110"
+        "id": "526237d1e0e34c524382c090"
       },
-      "is_automatic": null,
-      "communication": "5b20f6ba64c0360001ed109c",
-      "description": "60",
+      "is_automatic": false,
+      "communication": "5b20f6a864c0360001ed0d93",
+      "description": "141",
       "serial_number": "",
       "installation_date": "2010-06-01T00:00:00",
       "brand_name": null,
       "model_name": null,
-      "initial_values": [
-        84
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b8e",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c110"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0e92",
-      "description": "61",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        518
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9b90",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d2e0e34c524382c110"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6ba64c0360001ed109e",
-      "description": "194",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        278
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9ba0",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d3e0e34c524382c124"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6bb64c0360001ed10ad",
-      "description": "64",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        151
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9ba1",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d3e0e34c524382c124"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0eba",
-      "description": "65",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        221
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9ba2",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d3e0e34c524382c124"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6bb64c0360001ed10ae",
-      "description": "198",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        74
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9ba3",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d3e0e34c524382c124"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0ebb",
-      "description": "199",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        247
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9baa",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d3e0e34c524382c12c"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6bb64c0360001ed10b4",
-      "description": "200",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        25
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9bab",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d3e0e34c524382c12c"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0ecb",
-      "description": "201",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        52
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9bb2",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d3e0e34c524382c136"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6bb64c0360001ed10ba",
-      "description": "68",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        108
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9bb3",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d3e0e34c524382c136"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0ede",
-      "description": "69",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        254
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9bb4",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d3e0e34c524382c136"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6bb64c0360001ed10bb",
-      "description": "70",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        124
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9bb5",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d3e0e34c524382c136"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6bb64c0360001ed10bd",
-      "description": "202",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        192
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9bc2",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d3e0e34c524382c13e"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6bb64c0360001ed10c3",
-      "description": "71",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        33
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9bc3",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d3e0e34c524382c13e"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6bb64c0360001ed10c4",
-      "description": "72",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        165
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9bc4",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d3e0e34c524382c13e"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6bb64c0360001ed10c5",
-      "description": "205",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        71
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9bc5",
-      "_type": [
-        "HotWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d3e0e34c524382c13e"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6a864c0360001ed0eef",
-      "description": "206",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        42
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9bce",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d3e0e34c524382c144"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6bb64c0360001ed10c9",
-      "description": "75",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        22
-      ]
-    },
-    {
-      "id": "526a0caae0e34c3e6dda9bcf",
-      "_type": [
-        "ColdWaterAreaMeter",
-        "AreaMeter"
-      ],
-      "area": {
-        "id": "526237d3e0e34c524382c144"
-      },
-      "is_automatic": null,
-      "communication": "5b20f6bb64c0360001ed10c8",
-      "description": "76",
-      "serial_number": "",
-      "installation_date": "2010-06-01T00:00:00",
-      "brand_name": null,
-      "model_name": null,
-      "initial_values": [
-        100
-      ]
+      "initial_values": [0]
     }
   ]
 }
