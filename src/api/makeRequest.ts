@@ -18,7 +18,7 @@ export const api = createApi({
       },
     }),
     getMeters: builder.query({
-      query: () => "/meters",
+      query: (pageNumber: number) => `/meters/?limit=20&offset=${pageNumber*20}`,
       providesTags: [{ type: "meters" }],
       transformResponse: (response: { results: TMeter[] }) => {
         return response.results;
