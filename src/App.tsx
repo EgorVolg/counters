@@ -6,7 +6,7 @@ import { ItemsList } from "./components/Itemslist.tsx";
 export const App = () => {
   const { updateAreas, updateMeters } = useAction();
   const { data: dataAreas } = useGetAreasQuery({});
-  const { data: dataMeters } = useGetMetersQuery({});
+  const { data: dataMeters } = useGetMetersQuery(0);
 
   useEffect(() => {
     function areasFetchData() {

@@ -1,8 +1,8 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { TArea, TMeter } from "../components/types";
 
-// const API_URL = "http://showroom.eis24.me/api/v4/test";
-const API_URL = "http://localhost:3000";
+const API_URL = "http://showroom.eis24.me/api/v4/test";
+// const API_URL = "http://localhost:3000";
 export const api = createApi({
   reducerPath: "api",
   tagTypes: ["areas", "meters"],
