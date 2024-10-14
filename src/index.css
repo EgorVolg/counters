@@ -37,3 +37,35 @@
   color: #1f2939;
   margin-right: 4px;
 }
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   
+}
+
+.pagination button {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #ced5de;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #1f2939;
+  margin-right: 4px;
+}
+
+.pagination button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.pagination button:hover {
+  background-color: #e0e0e0;
+}
+
+.pagination button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}

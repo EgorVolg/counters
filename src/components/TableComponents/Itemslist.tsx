@@ -54,7 +54,7 @@ export const ItemsList = () => {
         </table>
       </div>
       <div className="border border-solid border-gray-200 min-h-8 rounded-b-lg">
-        <TableFooter handlePageChange={handlePageChange} count={meters?.count} />
+        <TableFooter handlePageChange={handlePageChange} count={meters?.count} pageNumber={pageNumber}/>
       </div>
     </main>
   );
