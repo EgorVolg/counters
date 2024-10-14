@@ -28,44 +28,21 @@
 }
 
 .paginationButton {
-  width: 32px;
-  height: 32px;
-  border: 1px solid #ced5de;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: #fff;
-  color: #1f2939;
-  margin-right: 4px;
-}
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-   
+  @apply w-8 h-8 border cursor-pointer bg-white text-[#1f2939] mr-1 rounded-[5px] border-solid border-[#ced5de];
 }
 
-.pagination button {
-  width: 32px;
-  height: 32px;
-  border: 1px solid #ced5de;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: #fff;
-  color: #1f2939;
-  margin-right: 4px;
+.paginationButton:active {
+  @apply bg-slate-100/[1] text-white border-slate-300/[1];
 }
 
-.pagination button.active {
-  background-color: #007bff;
-  color: white;
-  border-color: #007bff;
+.paginationButton:hover {
+  @apply bg-slate-300/[1];
 }
 
-.pagination button:hover {
-  background-color: #e0e0e0;
+.paginationButton:focus {
+  @apply outline-none;
 }
 
-.pagination button:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+.tableItemTd {
+  @apply p-4 text-gray-900;
 }

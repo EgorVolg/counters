@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 interface PaginationProps {
   totalPages: number; // общее количество страниц
   onPageChange: (page: number | string) => void;
 }
 
-export const Pagination: React.FC<PaginationProps> = ({ totalPages, onPageChange }) => {
+export const Pagination: React.FC<PaginationProps> = ({
+  totalPages,
+  onPageChange,
+}) => {
   const [currentPage, setCurrentPage] = useState(1);
   const buttonsToShow = 3;
 
@@ -22,8 +25,6 @@ export const Pagination: React.FC<PaginationProps> = ({ totalPages, onPageChange
     // Первая кнопка
     buttons.push(1);
 
-    
-
     // Добавляем кнопки в диапазоне
     for (let i = startPage; i <= endPage; i++) {
       buttons.push(i);
@@ -31,7 +32,7 @@ export const Pagination: React.FC<PaginationProps> = ({ totalPages, onPageChange
 
     // Если нужно показать промежуток между окончанием диапазона и последней кнопкой
     if (endPage < totalPages - 1) {
-      buttons.push('...');
+      buttons.push("...");
     }
 
     // Последняя кнопка
@@ -41,7 +42,7 @@ export const Pagination: React.FC<PaginationProps> = ({ totalPages, onPageChange
   };
 
   const handlePageChange = (page: number | string) => {
-    if (typeof page === 'number' && page !== currentPage) {
+    if (typeof page === "number" && page !== currentPage) {
       setCurrentPage(page);
     }
     onPageChange(page);
@@ -53,12 +54,12 @@ export const Pagination: React.FC<PaginationProps> = ({ totalPages, onPageChange
     <div className="pagination">
       {buttons.map((button, index) => (
         <button
+        className="paginationButton"
           key={index}
           onClick={() => handlePageChange(button)}
           disabled={button === currentPage}
           style={{
-            margin: '0 5px',
-            backgroundColor: button === currentPage ? '#007bff' : '#fff',
+            backgroundColor: button === currentPage ? "#CED5DE" : "white",
           }}
         >
           {button}

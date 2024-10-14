@@ -36,7 +36,7 @@ export const ItemsList = () => {
       );
       if (area) {
         const newObj = { meter, area } as TItem;
-        return <Item key={index} el={newObj} onRemoveMeter={onRemoveMeter} />;
+        return <Item key={index} number={index + 1} el={newObj} onRemoveMeter={onRemoveMeter} />;
       }
     }
   );

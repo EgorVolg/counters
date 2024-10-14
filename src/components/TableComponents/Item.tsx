@@ -1,5 +1,5 @@
-import { TItem } from "./types.ts";
 import React from "react";
+import { TItem } from "../types";
 
 const delsvg = (
   <svg
@@ -23,7 +23,8 @@ const delsvg = (
 export const Item: React.FC<{
   el: TItem;
   onRemoveMeter: (id: string) => void;
-}> = ({ el, onRemoveMeter }) => {
+  number: number;
+}> = ({ el, onRemoveMeter, number }) => {
   const getType = () => {
     if (el.meter._type[0] === "HotWaterAreaMeter") {
       return (
@@ -94,16 +95,16 @@ export const Item: React.FC<{
       className="bg-white transform duration-100 hover:bg-[#E0E5EB] border-b border-[#E0E5EB] border-solid 
     h-[52px] group/item"
     >
-      <td className="p-4 text-gray-900">1</td>
-      <td className="p-4  text-gray-900">{getType()}</td>
-      <td className="p-4  text-gray-900">{formateDate()} </td>
-      <td className="p-4  text-gray-900">{isAutomatic()} </td>
-      <td className="p-4  text-gray-900">{el.meter.description} </td>
-      <td className="p-4  text-gray-900 w-1/4">
+      <td className="tableItemTd">{number}</td>
+      <td className="tableItemTd">{getType()}</td>
+      <td className="tableItemTd">{formateDate()} </td>
+      <td className="tableItemTd">{isAutomatic()} </td>
+      <td className="tableItemTd">{el.meter.description} </td>
+      <td className="tableItemTd w-1/4">
         {"г Санкт-Петербург, ул Чудес, д 256"}
       </td>
       <td className="p-4  text-gray-900 w-1/4 ">
-        <div className="text-gray-700">
+        <div className="text-gray-700 ">
           к. {el.area.number}, {el.area.str_number_full}
         </div>
         <button
