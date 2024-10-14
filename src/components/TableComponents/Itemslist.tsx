@@ -22,7 +22,7 @@ export const ItemsList = () => {
 
   const onRemoveMeter = (id: string): void => {
     removeItem(id);
-    refetchMeters(dataMeters as TMeter[]);
+    refetchMeters(dataMeters);
   };
 
   const handlePageChange = (pageNumber: number) => {

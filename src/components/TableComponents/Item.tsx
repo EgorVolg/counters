@@ -26,7 +26,8 @@ export const Item: React.FC<{
   number: number;
 }> = ({ el, onRemoveMeter, number }) => {
   const getType = () => {
-    if (el.meter._type[0] === "HotWaterAreaMeter") {
+    const type = el.meter._type[0];
+    if (type === "HotWaterAreaMeter") {
       return (
         <div className="flex items-center justify-start">
           <svg
@@ -49,7 +50,8 @@ export const Item: React.FC<{
         </div>
       );
     }
-    if (el.meter._type[0] === "ColdWaterAreaMeter") {
+
+    if (type === "ColdWaterAreaMeter") {
       return (
         <div className="flex items-center justify-start">
           <svg
@@ -69,7 +71,6 @@ export const Item: React.FC<{
       );
     }
   };
-
   const isAutomatic = () => {
     if (el.meter.is_automatic === null) {
       return "Не определён";
@@ -80,8 +81,7 @@ export const Item: React.FC<{
     } else {
       return "Ручной";
     }
-  };
-
+  };  
   const formateDate = () => {
     const date = el.meter.installation_date;
     const year = date.slice(0, 4);
