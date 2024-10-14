@@ -9,13 +9,8 @@ export const App = () => {
   const { data: dataMeters } = useGetMetersQuery(0);
 
   useEffect(() => {
-    function areasFetchData() {
-      return updateAreas({ areas: dataAreas });
-    }
-    function metersFetchData() {
-      return updateMeters({ meters: dataMeters });
-    }
- 
+    const areasFetchData = () => updateAreas({ areas: dataAreas });
+    const metersFetchData = () => updateMeters({ meters: dataMeters });
 
     metersFetchData();
     areasFetchData();

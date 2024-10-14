@@ -36,8 +36,9 @@ export const api = createApi({
       query: (id: string) => ({
         url: `/meters/${id}`,
         method: "DELETE",
-        invalidateTags: ["meters"],
+
       }),
+      invalidatesTags: ["meters"],
     }),
   }),
 });
