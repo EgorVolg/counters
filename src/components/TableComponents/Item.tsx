@@ -81,7 +81,7 @@ export const Item: React.FC<{
     } else {
       return "Ручной";
     }
-  };  
+  };
   const formateDate = () => {
     const date = el.meter.installation_date;
     const year = date.slice(0, 4);
@@ -100,9 +100,7 @@ export const Item: React.FC<{
       <td className="tableItemTd">{formateDate()} </td>
       <td className="tableItemTd">{isAutomatic()} </td>
       <td className="tableItemTd">{el.meter.description} </td>
-      <td className="tableItemTd w-1/4">
-        {"г Санкт-Петербург, ул Чудес, д 256"}
-      </td>
+      <td className="tableItemTd w-1/4">{el.area.house.address}</td>
       <td className="p-4  text-gray-900 w-1/4 ">
         <div className="text-gray-700 ">
           к. {el.area.number}, {el.area.str_number_full}
