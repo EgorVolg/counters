@@ -24,7 +24,7 @@ export const api = createApi({
       },
     }),
     getMeters: builder.query({
-      query: (pageNumber: number) => `/meters/?limit=20&offset=${pageNumber * 20}`,
+      query: (pageNumber: number) => `/meters/?limit=20&offset=${(pageNumber - 1) * 20}`,
       providesTags: [{ type: "meters" }],
       transformResponse: (response: metersRest) => {
         const results = response.results;

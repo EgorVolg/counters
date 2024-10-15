@@ -1,62 +1,88 @@
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
 interface PaginationProps {
   totalPages: number;
-  onPageChange: (page: number | string) => void;
+  currentPage: number;
+  onPageChange: (page: number) => void;
+}
+
+interface PaginationProps {
+  totalPages: number;
+  currentPage: number;
+  onPageChange: (page: number) => void;
 }
 
 export const Pagination: React.FC<PaginationProps> = ({
   totalPages,
+  currentPage,
   onPageChange,
 }) => {
-  const [currentPage, setCurrentPage] = useState(1);
-  const buttonsToShow = 3;
+  const [visiblePages, setVisiblePages] = useState<number[]>([]);
 
-  const getButtons = () => {
-    const buttons: (number | string)[] = [];
-    let startPage = Math.max(2, currentPage - Math.floor(buttonsToShow / 2));
-    const endPage = Math.min(totalPages - 1, startPage + buttonsToShow - 1);
+  const calculateVisiblePages = useCallback(
+    (currentPage: number, totalPages: number) => {
+      const maxVisiblePages = 12;
+      const pages: number[] = [];
 
-    if (endPage - startPage < buttonsToShow - 1) {
-      startPage = Math.max(2, endPage - buttonsToShow + 2);
-    }
+      if (totalPages <= maxVisiblePages) {
+        pages.push(...Array.from({ length: totalPages }, (_, i) => i + 1));
+      } else {
+        if (currentPage <= 6) {
+          pages.push(...Array.from({ length: 8 }, (_, i) => i + 1));
+          pages.push(-1, totalPages - 2, totalPages - 1, totalPages);
+        } else if (currentPage > totalPages - 6) {
+          pages.push(
+            1,
+            2,
+            3,
+            -1,
+            ...Array.from({ length: 8 }, (_, i) => totalPages - 8 + i + 1)
+          );
+        } else {
+          pages.push(
+            1,
+            2,
+            3,
+            -1,
+            currentPage - 1,
+            currentPage,
+            currentPage + 1,
+            -1,
+            totalPages - 2,
+            totalPages - 1,
+            totalPages
+          );
+        }
+      }
 
-    buttons.push(1);
+      return pages;
+    },
+    []
+  );
 
-    for (let i = startPage; i <= endPage; i++) {
-      buttons.push(i);
-    }
+  const handlePageChange = useCallback(
+    (page: number) => {
+      if (page > 0 && page <= totalPages) {
+        onPageChange(page);
+      }
+    },
+    [onPageChange, totalPages]
+  );
 
-    if (endPage < totalPages - 1) {
-      buttons.push("...");
-    }
-    buttons.push(totalPages);
-
-    return buttons;
-  };
-
-  const handlePageChange = (page: number | string) => {
-    if (typeof page === "number" && page !== currentPage) {
-      setCurrentPage(page);
-    }
-    onPageChange(page);
-  };
-
-  const buttons = getButtons();
+  useEffect(() => {
+    setVisiblePages(calculateVisiblePages(currentPage, totalPages));
+  }, [calculateVisiblePages, currentPage, totalPages]);
 
   return (
-    <div className="pagination">
-      {buttons.map((button, index) => (
+    <div className="flex justify-center">
+      {visiblePages.map((page, index) => (
         <button
-        className="paginationButton"
+          className="paginationButton"
           key={index}
-          onClick={() => handlePageChange(button)}
-          disabled={button === currentPage}
-          style={{
-            backgroundColor: button === currentPage ? "#CED5DE" : "white",
-          }}
+          onClick={() => handlePageChange(page)}
+          disabled={currentPage === page || page === -1}
         >
-          {button}
+          {page === -1 ? "..." : page}
         </button>
       ))}
     </div>
