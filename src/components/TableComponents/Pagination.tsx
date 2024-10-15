@@ -21,7 +21,7 @@ export const Pagination: React.FC<PaginationProps> = ({
 
   const calculateVisiblePages = useCallback(
     (currentPage: number, totalPages: number) => {
-      const maxVisiblePages = 12;
+      const maxVisiblePages = 15;
       const pages: number[] = [];
 
       if (totalPages <= maxVisiblePages) {
@@ -38,15 +38,17 @@ export const Pagination: React.FC<PaginationProps> = ({
             -1,
             ...Array.from({ length: 8 }, (_, i) => totalPages - 8 + i + 1)
           );
-        } else {
+        } else if (currentPage > 6 && currentPage < totalPages - 6) {
           pages.push(
             1,
             2,
             3,
             -1,
+            currentPage - 2,
             currentPage - 1,
             currentPage,
             currentPage + 1,
+            currentPage + 2,
             -1,
             totalPages - 2,
             totalPages - 1,
@@ -81,6 +83,9 @@ export const Pagination: React.FC<PaginationProps> = ({
           key={index}
           onClick={() => handlePageChange(page)}
           disabled={currentPage === page || page === -1}
+          style={{
+            backgroundColor: currentPage === page ? "#CED5DE" : "white",
+          }}
         >
           {page === -1 ? "..." : page}
         </button>
