@@ -1,7 +1,10 @@
 import { useEffect } from "react";
 import axios from "axios";
+import { useStore } from "./state/RootStore";
 
 export const App = () => {
+  const rootStore = useStore();
+
   useEffect(() => {
     async function fetchData() {
       const resMeters = await axios.get(
@@ -12,10 +15,12 @@ export const App = () => {
       );
       const dataMeters = resMeters.data;
       const dataAreas = resAreas.data;
+
+      rootStore.getData(dataAreas.results, dataMeters.results);
     }
 
     fetchData();
-  }, []);
+  }, [rootStore]);
 
   return (
     <div className=" bg-neutral-50">
