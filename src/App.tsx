@@ -1,29 +1,28 @@
 import { useEffect } from "react";
-import { useAction } from "./components/hooks/useAction.ts";
-import { useGetAreasQuery, useGetMetersQuery } from "./api/makeRequest.ts";
-import { ItemsList } from "./components/TableComponents/Itemslist.tsx";
+import axios from "axios";
 
 export const App = () => {
-  const { updateAreas, updateMeters } = useAction();
-  const { data: dataAreas } = useGetAreasQuery({});
-  const { data: dataMeters } = useGetMetersQuery(0);
-
   useEffect(() => {
-    const areasFetchData = () => updateAreas({ areas: dataAreas });
-    const metersFetchData = () => updateMeters({ meters: dataMeters });
+    async function fetchData() {
+      const resMeters = await axios.get(
+        "https://showroom.eis24.me/api/v4/test/meters/"
+      );
+      const resAreas = await axios.get(
+        "https://showroom.eis24.me/api/v4/test/areas/"
+      );
+      const dataMeters = resMeters.data;
+      const dataAreas = resAreas.data;
+    }
 
-    metersFetchData();
-    areasFetchData();
-  }, [updateAreas, updateMeters, dataAreas, dataMeters]);
+    fetchData();
+  }, []);
 
   return (
     <div className=" bg-neutral-50">
       <header className="text-2xl pt-4 pl-4">
         <strong>Список счётчиков</strong>
       </header>
-      <main className="w-full h-full p-4">
-        <ItemsList />
-      </main>
+      <main className="w-full h-full p-4">{/* <ItemsList /> */}</main>
     </div>
   );
 };
