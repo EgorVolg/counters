@@ -16,8 +16,4 @@ const AreaModel = t.model("area", {
     .model("AreasModel", {
       results: t.array(AreaModel),
     })
-    // .actions(self => ({
-    //     setAreas(areas: TArea[]) {
-    //         self.results = areas;
-    //     },
-    // }))
+   

@@ -1,3 +1,5 @@
+import { t } from "mobx-state-tree";
+
 export type TMeter = {
   id: string;
   _type: string[];
@@ -27,4 +29,18 @@ export type TArea = {
 export type TItem = {
   meter: TMeter;
   area: TArea;
+}
+
+export type TResponseArea = {
+  count: number;
+  next: string | null;
+  previous: string | null;
+  results: TArea[];
+}
+
+export type TResponseMeter = {
+  count: number;
+  next: string | null;
+  previous: string | null;
+  results: TMeter[];
 }
