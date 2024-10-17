@@ -1,20 +1,27 @@
 import { useEffect } from "react";
-import { useAction } from "./components/hooks/useAction.ts";
-import { useGetAreasQuery, useGetMetersQuery } from "./api/makeRequest.ts";
-import { ItemsList } from "./components/TableComponents/Itemslist.tsx";
+import axios from "axios";
+import { useStore } from "./state/RootStore";
+import { ItemsList } from "./components/TableComponents/Itemslist";
 
 export const App = () => {
-  const { updateAreas, updateMeters } = useAction();
-  const { data: dataAreas } = useGetAreasQuery({});
-  const { data: dataMeters } = useGetMetersQuery(0);
+  const rootStore = useStore();
 
   useEffect(() => {
-    const areasFetchData = () => updateAreas({ areas: dataAreas });
-    const metersFetchData = () => updateMeters({ meters: dataMeters });
+    async function fetchData() {
+      const resMeters = await axios.get(
+        "https://showroom.eis24.me/api/v4/test/meters/"
+      );
+      const resAreas = await axios.get(
+        "https://showroom.eis24.me/api/v4/test/areas/"
+      );
+      const dataMeters = resMeters.data.results;
+      const dataAreas = resAreas.data.results;
 
-    metersFetchData();
-    areasFetchData();
-  }, [updateAreas, updateMeters, dataAreas, dataMeters]);
+      rootStore.getData(dataAreas, dataMeters);
+    }
+
+    fetchData();
+  }, [rootStore]);
 
   return (
     <div className=" bg-neutral-50">
