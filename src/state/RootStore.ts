@@ -1,32 +1,37 @@
-import { Instance, t } from "mobx-state-tree";
+import { flow, Instance, t } from "mobx-state-tree";
 import { MetersModel } from "./models/Meters.model";
 import { AreasModel } from "./models/Areas.model";
-import { TArea, TMeter } from "../components/types";
+import axios from "axios";
 
 export type TRootStore = Instance<typeof RootStore>;
-export const RootStore = t.model("RootStore", {
+const API_URL = "https://showroom.eis24.me/api/v4/test/";
+
+export const RootStore = t
+  .model("RootStore", {
     meters: t.array(MetersModel),
     areas: t.array(AreasModel),
-}).actions(store => ({
-    getData(areas: TArea[], meters: TMeter[]) {
-        store.areas.push({
-            results: areas
-        }),
-            store.meters.push({
-                results: meters
-            })
-    }
-}))
+  })
+  .actions((store) => ({
+    getData: flow(function* () {
+      const resMeters = yield axios.get(`${API_URL}meters/`);
+      const resAreas = yield axios.get(`${API_URL}areas/`);
 
-let rootStore: TRootStore
+      console.log(resMeters.data.results, resAreas.data.results);
+      const dataMeters = resMeters.data.results;
+      const dataAreas = resAreas.data.results;
+
+      store.meters.push(...dataMeters.results);
+      store.areas.push(...dataAreas.results);
+    }),
+  }));
+
+let rootStore: TRootStore;
 export function useStore() {
-    if (!rootStore) {
-        rootStore = RootStore.create({
-            meters: [],
-            areas: [],
-        })
-    }
-    return rootStore
+  if (!rootStore) {
+    rootStore = RootStore.create({
+      meters: [],
+      areas: [],
+    });
+  }
+  return rootStore;
 }
-
-

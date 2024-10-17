@@ -12,13 +12,12 @@ export const ItemsList = () => {
 
   const meters = rootStore.meters;
   const areas = rootStore.areas;
-
-  console.log(areas.toJSON(), meters.toJSON());
+console.log(meters.toJSON(), areas);
+  
   // const onRemoveMeter = (id: string): void => {
   //   removeItem(id);
   //   refetchMeters(dataMeters);
   // };
-  
 
   const handlePageChange = (pageNumber: number) => {
     setPageNumber(pageNumber);
@@ -54,11 +53,11 @@ export const ItemsList = () => {
         </table>
       </div>
       <div className="border border-solid border-gray-200 min-h-8 rounded-b-lg">
-        <TableFooter
+        {/* <TableFooter
           handlePageChange={handlePageChange}
           count={meters.count}
           pageNumber={pageNumber}
-        />
+        /> */}
       </div>
     </main>
   );

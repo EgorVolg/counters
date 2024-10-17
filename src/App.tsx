@@ -1,28 +1,6 @@
-import { useEffect } from "react";
-import axios from "axios";
-import { useStore } from "./state/RootStore";
 import { ItemsList } from "./components/TableComponents/Itemslist";
 
 export const App = () => {
-  const rootStore = useStore();
-
-  useEffect(() => {
-    async function fetchData() {
-      const resMeters = await axios.get(
-        "https://showroom.eis24.me/api/v4/test/meters/"
-      );
-      const resAreas = await axios.get(
-        "https://showroom.eis24.me/api/v4/test/areas/"
-      );
-      const dataMeters = resMeters.data.results;
-      const dataAreas = resAreas.data.results;
-
-      rootStore.getData(dataAreas, dataMeters);
-    }
-
-    fetchData();
-  }, [rootStore]);
-
   return (
     <div className=" bg-neutral-50">
       <header className="text-2xl pt-4 pl-4">
