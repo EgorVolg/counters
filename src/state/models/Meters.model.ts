@@ -1,6 +1,6 @@
 import { t } from "mobx-state-tree";
 
-const MeterModel = t.model("meter", {
+export const MeterModel = t.model("meter", {
     id: t.optional(t.string, ""),
     _type: t.optional(t.array(t.string), []),
     area: t.model("area", {
@@ -16,8 +16,5 @@ const MeterModel = t.model("meter", {
     initial_values: t.optional(t.array(t.number), []),
 });
 
-export const MetersModel = t
-    .model("MetersModel", {
-        results: t.array(MeterModel),
-    })
+
  

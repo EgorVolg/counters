@@ -1,10 +1,14 @@
-import { TArea, TItem, TMeter } from "../types.ts";
 import { TableHeader } from "./TableHeader.tsx";
-
 import { TableFooter } from "./TableFooter.tsx";
 import { useState } from "react";
 import { Item } from "./Item.tsx";
 import { useStore } from "../../state/RootStore.ts";
+import { Instance } from "mobx-state-tree";
+import { MeterModel } from "../../state/models/Meters.model.ts";
+import { AreaModel } from "../../state/models/Areas.model.ts";
+
+export type Meter = Instance<typeof MeterModel>;
+export type Area = Instance<typeof AreaModel>;
 
 export const ItemsList = () => {
   const [pageNumber, setPageNumber] = useState(1);
@@ -12,33 +16,29 @@ export const ItemsList = () => {
 
   const meters = rootStore.meters;
   const areas = rootStore.areas;
-console.log(meters.toJSON(), areas);
-  
-  // const onRemoveMeter = (id: string): void => {
-  //   removeItem(id);
-  //   refetchMeters(dataMeters);
-  // };
 
-  const handlePageChange = (pageNumber: number) => {
-    setPageNumber(pageNumber);
+  const onRemoveMeter = () => {
+    console.log("remove");
   };
 
-  // const createMeter = meters.map((meter: TMeter, index: number) => {
-  //   const area = ((areas as TArea[]) || []).find(
-  //     (area: TArea) => area.id === meter.area.id
-  //   );
-  //   if (area) {
-  //     const newObj = { meter, area } as TItem;
-  //     return (
-  //       <Item
-  //         key={index}
-  //         number={index + 1}
-  //         el={newObj}
-  //         // onRemoveMeter={onRemoveMeter}
-  //       />
-  //     );
-  //   }
-  // });
+  // const handlePageChange = (pageNumber: number) => {
+  //   setPageNumber(pageNumber);
+  // };
+
+  const createMeter = meters.map((meter: Meter, index: number) => {
+    const area = areas.find((area: Area) => area.id === meter.area.id);
+    if (area) {
+      const newObj = { meter, area };
+      return (
+        <Item
+          key={index}
+          number={index + 1}
+          el={newObj}
+          onRemoveMeter={onRemoveMeter}
+        />
+      );
+    }
+  });
 
   return (
     <main>
@@ -49,7 +49,7 @@ console.log(meters.toJSON(), areas);
               <TableHeader />
             </tr>
           </thead>
-          {/* <tbody className="">{createMeter}</tbody> */}
+          <tbody className="">{createMeter}</tbody>
         </table>
       </div>
       <div className="border border-solid border-gray-200 min-h-8 rounded-b-lg">

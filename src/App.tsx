@@ -1,6 +1,17 @@
+import { useEffect } from "react";
 import { ItemsList } from "./components/TableComponents/Itemslist";
+import { useStore } from "./state/RootStore";
 
 export const App = () => {
+  const store = useStore();
+
+  useEffect(() => {
+    const callFetch = async () => {
+      await store.getData();
+    };
+    void callFetch();
+  }, [store]);
+
   return (
     <div className=" bg-neutral-50">
       <header className="text-2xl pt-4 pl-4">

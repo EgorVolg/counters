@@ -1,6 +1,6 @@
 import { t } from "mobx-state-tree";
 
-const AreaModel = t.model("area", {
+export const AreaModel = t.model("area", {
     id: t.optional(t.string, ""),
     number: t.optional(t.number, 0),
     str_number: t.optional(t.string, ""),
@@ -12,8 +12,5 @@ const AreaModel = t.model("area", {
     }),
   });
 
-  export const AreasModel = t
-    .model("AreasModel", {
-      results: t.array(AreaModel),
-    })
+
    
