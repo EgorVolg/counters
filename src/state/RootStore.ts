@@ -13,14 +13,14 @@ export const RootStore = t
   })
   .actions((store) => ({
     getData: flow(function* () {
-      const resMeters = yield axios.get(`${API_URL}meters/`);
-      const resAreas = yield axios.get(`${API_URL}areas/`);
+      const resMeters = yield axios.get(`${API_URL}meters/?limit=1000&offset=0`);
+      const resAreas = yield axios.get(`${API_URL}areas/?limit=150&offset=0`);
 
       const dataMeters = resMeters.data.results;
       const dataAreas = resAreas.data.results;
 
-      store.meters.push(dataMeters);
-      store.areas.push(dataAreas);
+      store.meters.push(...dataMeters);
+      store.areas.push(...dataAreas);
     }),
   }));
 
