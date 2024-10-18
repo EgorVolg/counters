@@ -2,7 +2,7 @@ import { TableHeader } from "./TableHeader.tsx";
 import { TableFooter } from "./TableFooter.tsx";
 import { useState } from "react";
 import { Item } from "./Item.tsx";
-import { useStore } from "../../state/RootStore.ts";
+import { TRootStore, useStore } from "../../state/RootStore.ts";
 import { Instance } from "mobx-state-tree";
 import { MeterModel } from "../../state/models/Meters.model.ts";
 import { AreaModel } from "../../state/models/Areas.model.ts";
@@ -10,12 +10,10 @@ import { AreaModel } from "../../state/models/Areas.model.ts";
 export type Meter = Instance<typeof MeterModel>;
 export type Area = Instance<typeof AreaModel>;
 
-export const ItemsList = () => {
+export const ItemsList = ({ store }: { store: TRootStore }) => {
   const [pageNumber, setPageNumber] = useState(1);
-  const rootStore = useStore();
-
-  const meters = rootStore.meters;
-  const areas = rootStore.areas;
+  const { meters, areas } = store;
+  console.log(meters);
 
   const onRemoveMeter = () => {
     console.log("remove");

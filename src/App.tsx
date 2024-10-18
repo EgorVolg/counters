@@ -1,10 +1,13 @@
-import { useEffect } from "react";
+import { FC, useEffect } from "react";
 import { ItemsList } from "./components/TableComponents/Itemslist";
-import { useStore } from "./state/RootStore";
+import { TRootStore } from "./state/RootStore";
+import { observer } from "mobx-react-lite";
 
-export const App = () => {
-  const store = useStore();
+type TProps = {
+  store: TRootStore;
+};
 
+export const App: FC<TProps> = observer(({store}) => {
   useEffect(() => {
     const callFetch = async () => {
       await store.getData();
@@ -13,13 +16,13 @@ export const App = () => {
   }, [store]);
 
   return (
-    <div className=" bg-neutral-50">
+    <div className="bg-neutral-50">
       <header className="text-2xl pt-4 pl-4">
         <strong>Список счётчиков</strong>
       </header>
       <main className="w-full h-full p-4">
-        <ItemsList />
+        <ItemsList store={store}/>
       </main>
     </div>
   );
-};
+});

@@ -3,9 +3,9 @@ import axios from "axios";
 import { AreaModel } from "./models/Areas.model";
 import { MeterModel } from "./models/Meters.model";
 
-export type TRootStore = Instance<typeof RootStore>;
 const API_URL = "https://showroom.eis24.me/api/v4/test/";
 
+export type TRootStore = Instance<typeof RootStore>;
 export const RootStore = t
   .model("RootStore", {
     meters: t.array(MeterModel),
@@ -13,7 +13,9 @@ export const RootStore = t
   })
   .actions((store) => ({
     getData: flow(function* () {
-      const resMeters = yield axios.get(`${API_URL}meters/?limit=1000&offset=0`);
+      const resMeters = yield axios.get(
+        `${API_URL}meters/?limit=20&offset=0`
+      );
       const resAreas = yield axios.get(`${API_URL}areas/?limit=150&offset=0`);
 
       const dataMeters = resMeters.data.results;
@@ -24,13 +26,9 @@ export const RootStore = t
     }),
   }));
 
-let rootStore: TRootStore;
-export function useStore() {
-  if (!rootStore) {
-    rootStore = RootStore.create({
+export const rootStore = RootStore.create({
       meters: [],
       areas: [],
-    });
-  }
-  return rootStore;
-}
+    });    
+  
+ 
