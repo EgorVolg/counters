@@ -1,12 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 
-interface PaginationProps {
-  totalPages: number;
-  currentPage: number;
-  onPageChange: (page: number) => void;
-}
-
-interface PaginationProps {
+type PaginationProps = {
   totalPages: number;
   currentPage: number;
   onPageChange: (page: number) => void;
