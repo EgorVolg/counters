@@ -12,9 +12,9 @@ export const RootStore = t
     areas: t.array(AreaModel),
   })
   .actions((store) => ({
-    getData: flow(function* () {
+    getData: flow(function* (pageNumber: number) {
       const resMeters = yield axios.get(
-        `${API_URL}meters/?limit=20&offset=0`
+        `${API_URL}meters/?limit=20&offset=${Math.ceil(pageNumber * 20) - 1}`
       );
       const resAreas = yield axios.get(`${API_URL}areas/?limit=150&offset=0`);
 
@@ -27,8 +27,6 @@ export const RootStore = t
   }));
 
 export const rootStore = RootStore.create({
-      meters: [],
-      areas: [],
-    });    
-  
- 
+  meters: [],
+  areas: [],
+});

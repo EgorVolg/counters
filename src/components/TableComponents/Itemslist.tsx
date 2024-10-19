@@ -13,14 +13,13 @@ export type Area = Instance<typeof AreaModel>;
 export const ItemsList = ({ store }: { store: TRootStore }) => {
   const [pageNumber, setPageNumber] = useState(1);
   const { meters, areas } = store;
-  console.log(meters);
-
   const onRemoveMeter = () => {
     console.log("remove");
   };
 
   const handlePageChange = (pageNumber: number) => {
     setPageNumber(pageNumber);
+    store.getData(pageNumber);
   };
 
   const createMeter = meters.map((meter: Meter, index: number) => {
