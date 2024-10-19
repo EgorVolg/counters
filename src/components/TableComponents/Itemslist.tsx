@@ -1,27 +1,20 @@
 import { TableHeader } from "./TableHeader.tsx";
 import { TableFooter } from "./TableFooter.tsx";
-import { useState } from "react";
 import { Item } from "./Item.tsx";
 import { TRootStore } from "../../state/RootStore.ts";
 import { Instance } from "mobx-state-tree";
 import { MeterModel } from "../../state/models/Meters.model.ts";
 import { AreaModel } from "../../state/models/Areas.model.ts";
+import { observer } from "mobx-react-lite";
 
 export type Meter = Instance<typeof MeterModel>;
 export type Area = Instance<typeof AreaModel>;
 
-export const ItemsList = ({ store }: { store: TRootStore }) => {
-  const [pageNumber, setPageNumber] = useState(1);
+export const ItemsList = observer(({ store }: { store: TRootStore }) => {
   const { meters, areas } = store;
-  console.log(meters);
 
   const onRemoveMeter = () => {
     console.log("remove");
-  };
-
-  const handlePageChange = (pageNumber: number) => {
-    store.getMeters(pageNumber);
-    setPageNumber(pageNumber);
   };
 
   const createMeter = meters.map((meter: Meter, index: number) => {
@@ -52,12 +45,8 @@ export const ItemsList = ({ store }: { store: TRootStore }) => {
         </table>
       </div>
       <div className="border border-solid border-gray-200 min-h-8 rounded-b-lg">
-        <TableFooter
-          handlePageChange={handlePageChange}
-          count={1200}
-          pageNumber={pageNumber}
-        />
+        <TableFooter />
       </div>
     </main>
   );
-};
+});
