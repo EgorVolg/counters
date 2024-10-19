@@ -12,17 +12,17 @@ export const RootStore = t
     areas: t.array(AreaModel),
   })
   .actions((store) => ({
-    getData: flow(function* (pageNumber: number) {
-      const resMeters = yield axios.get(
-        `${API_URL}meters/?limit=20&offset=${Math.ceil(pageNumber * 20) - 1}`
-      );
-      const resAreas = yield axios.get(`${API_URL}areas/?limit=150&offset=0`);
-
-      const dataMeters = resMeters.data.results;
+    getAreas: flow(function* () {
+      const resAreas = yield axios.get(`${API_URL}areas/`);
       const dataAreas = resAreas.data.results;
-
-      store.meters.push(...dataMeters);
       store.areas.push(...dataAreas);
+    }),
+    getMeters: flow(function* (pageNumber) {
+      const resMeters = yield axios.get(
+        `${API_URL}meters/?limit=20&offset=${(pageNumber - 1) * 20}`
+      );
+      const dataMeters = resMeters.data.results;
+      store.meters.push(...dataMeters);
     }),
   }));
 

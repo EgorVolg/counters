@@ -7,10 +7,11 @@ type TProps = {
   store: TRootStore;
 };
 
-export const App: FC<TProps> = observer(({store}) => {
+export const App: FC<TProps> = observer(({ store }) => {
   useEffect(() => {
     const callFetch = async () => {
-      await store.getData();
+      await store.getAreas();
+      await store.getMeters(1);
     };
     void callFetch();
   }, [store]);
@@ -21,7 +22,7 @@ export const App: FC<TProps> = observer(({store}) => {
         <strong>Список счётчиков</strong>
       </header>
       <main className="w-full h-full p-4">
-        <ItemsList store={store}/>
+        <ItemsList store={store} />
       </main>
     </div>
   );

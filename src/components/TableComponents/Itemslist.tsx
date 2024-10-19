@@ -13,13 +13,15 @@ export type Area = Instance<typeof AreaModel>;
 export const ItemsList = ({ store }: { store: TRootStore }) => {
   const [pageNumber, setPageNumber] = useState(1);
   const { meters, areas } = store;
+  console.log(meters);
+
   const onRemoveMeter = () => {
     console.log("remove");
   };
 
   const handlePageChange = (pageNumber: number) => {
+    store.getMeters(pageNumber);
     setPageNumber(pageNumber);
-    store.getData(pageNumber);
   };
 
   const createMeter = meters.map((meter: Meter, index: number) => {
@@ -52,7 +54,7 @@ export const ItemsList = ({ store }: { store: TRootStore }) => {
       <div className="border border-solid border-gray-200 min-h-8 rounded-b-lg">
         <TableFooter
           handlePageChange={handlePageChange}
-          count={1500}
+          count={1200}
           pageNumber={pageNumber}
         />
       </div>
