@@ -11,7 +11,7 @@ export const App: FC<TProps> = observer(({ store }) => {
   useEffect(() => {
     const callFetch = async () => {
       await store.getAreas();
-      await store.getMeters(0);
+      await store.getMeters(1);
     };
     void callFetch();
   }, [store]);

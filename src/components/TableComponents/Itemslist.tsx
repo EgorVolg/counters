@@ -1,16 +1,21 @@
+import { observer } from "mobx-react-lite";
+import { Instance } from "mobx-state-tree";
+import { FC } from "react";
 import { TableHeader } from "./TableHeader.tsx";
 import { TableFooter } from "./TableFooter.tsx";
 import { Item } from "./Item.tsx";
 import { TRootStore } from "../../state/RootStore.ts";
-import { Instance } from "mobx-state-tree";
 import { MeterModel } from "../../state/models/Meters.model.ts";
 import { AreaModel } from "../../state/models/Areas.model.ts";
-import { observer } from "mobx-react-lite";
 
 export type Meter = Instance<typeof MeterModel>;
 export type Area = Instance<typeof AreaModel>;
 
-export const ItemsList = observer(({ store }: { store: TRootStore }) => {
+type Props = {
+  store: TRootStore
+} 
+
+export const ItemsList: FC<Props> = observer(({ store }) => {
   const { meters, areas } = store;
 
   const onRemoveMeter = () => {

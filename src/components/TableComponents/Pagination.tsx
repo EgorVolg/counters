@@ -8,7 +8,7 @@ type PaginationProps = {
 };
 
 export const Pagination: React.FC<PaginationProps> = observer(
-  ({ store }, totalPages = 1200) => {
+  ({ store , totalPages = 1200}) => {
     const [visiblePages, setVisiblePages] = useState<number[]>([]);
 
     const { currentPage } = store;

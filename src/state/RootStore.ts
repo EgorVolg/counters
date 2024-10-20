@@ -3,8 +3,7 @@ import axios from "axios";
 import { AreaModel } from "./models/Areas.model";
 import { MeterModel } from "./models/Meters.model";
 
-// const API_URL = "https://showroom.eis24.me/api/v4/test";
-const API_URL = "http://localhost:3000";
+const API_URL = "https://showroom.eis24.me/api/v4/test";
 
 export type TRootStore = Instance<typeof RootStore>;
 export const RootStore = t
@@ -17,14 +16,14 @@ export const RootStore = t
     getAreas: flow(function* () {
       const resAreas = yield axios.get(`${API_URL}/areas/`);
       const dataAreas = resAreas.data.results;
-      store.areas.push(...dataAreas);
+      store.areas = dataAreas;
     }),
     getMeters: flow(function* (page: number) {
       const resMeters = yield axios.get(
         `${API_URL}/meters/?limit=20&offset=${(page - 1) * 20}`
       );
       const dataMeters = resMeters.data.results;
-      store.meters.push(...dataMeters);
+      store.meters = dataMeters;
     }),
     getCurrentPage: (page: number) => (store.currentPage = page),
   }));
@@ -32,5 +31,5 @@ export const RootStore = t
 export const rootStore = RootStore.create({
   meters: [],
   areas: [],
-  currentPage: 0,
+  currentPage: 1,
 });
