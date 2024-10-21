@@ -1,5 +1,7 @@
+import { Instance } from "mobx-state-tree";
 import React from "react";
-import { TItem } from "../types";
+import { MeterModel } from "../../state/models/Meters.model";
+import { AreaModel } from "../../state/models/Areas.model";
 
 const delsvg = (
   <svg
@@ -21,7 +23,7 @@ const delsvg = (
   </svg>
 );
 export const Item: React.FC<{
-  el: TItem;
+  el: { meter: Instance<typeof MeterModel>; area: Instance<typeof AreaModel> };
   onRemoveMeter: (id: string) => void;
   number: number;
 }> = ({ el, onRemoveMeter, number }) => {

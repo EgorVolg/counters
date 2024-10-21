@@ -1,23 +1,16 @@
+import { observer } from "mobx-react-lite";
 import React, { useCallback, useEffect, useState } from "react";
+import { TRootStore } from "../../state/RootStore";
 
-interface PaginationProps {
-  totalPages: number;
-  currentPage: number;
-  onPageChange: (page: number) => void;
-}
+type PaginationProps = {
+  store: TRootStore;
+};
 
-interface PaginationProps {
-  totalPages: number;
-  currentPage: number;
-  onPageChange: (page: number) => void;
-}
-
-export const Pagination: React.FC<PaginationProps> = ({
-  totalPages,
-  currentPage,
-  onPageChange,
-}) => {
+export const Pagination: React.FC<PaginationProps> = observer(({ store }) => {
   const [visiblePages, setVisiblePages] = useState<number[]>([]);
+
+  const { metersCount, currentPage, getMeters, getCurrentPage } = store;
+  const totalPages = Math.ceil(metersCount / 20);
 
   const calculateVisiblePages = useCallback(
     (currentPage: number, totalPages: number) => {
@@ -38,7 +31,7 @@ export const Pagination: React.FC<PaginationProps> = ({
             -1,
             ...Array.from({ length: 8 }, (_, i) => totalPages - 8 + i + 1)
           );
-        } else if (currentPage > 6 && currentPage < totalPages - 6) {
+        } else {
           pages.push(
             1,
             2,
@@ -56,7 +49,6 @@ export const Pagination: React.FC<PaginationProps> = ({
           );
         }
       }
-
       return pages;
     },
     []
@@ -64,11 +56,10 @@ export const Pagination: React.FC<PaginationProps> = ({
 
   const handlePageChange = useCallback(
     (page: number) => {
-      if (page > 0 && page <= totalPages) {
-        onPageChange(page);
-      }
+      getMeters(page);
+      getCurrentPage(page);
     },
-    [onPageChange, totalPages]
+    [getCurrentPage, getMeters]
   );
 
   useEffect(() => {
@@ -92,4 +83,4 @@ export const Pagination: React.FC<PaginationProps> = ({
       ))}
     </div>
   );
-};
+});

@@ -1,45 +1,41 @@
-import { TArea, TItem, TMeter } from "../types.ts";
+import { observer } from "mobx-react-lite";
+import { Instance } from "mobx-state-tree";
+import { FC } from "react";
 import { TableHeader } from "./TableHeader.tsx";
-
-import {
-  useGetAreasQuery,
-  useGetMetersQuery,
-  useRemoveItemMutation,
-} from "../../api/makeRequest.ts";
 import { TableFooter } from "./TableFooter.tsx";
-import { useState } from "react";
 import { Item } from "./Item.tsx";
+import { TRootStore } from "../../state/RootStore.ts";
+import { MeterModel } from "../../state/models/Meters.model.ts";
+import { AreaModel } from "../../state/models/Areas.model.ts";
 
-export const ItemsList = () => {
-  const [pageNumber, setPageNumber] = useState(1);
+export type Meter = Instance<typeof MeterModel>;
+export type Area = Instance<typeof AreaModel>;
 
-  const { data: areas } = useGetAreasQuery({});
-  const { data: meters } = useGetMetersQuery(pageNumber);
+type Props = {
+  store: TRootStore
+} 
 
-  const [removeItem] = useRemoveItemMutation();
-  const { data: dataMeters, refetch: refetchMeters } =
-    useGetMetersQuery(pageNumber);
+export const ItemsList: FC<Props> = observer(({ store }) => {
+  const { meters, areas } = store;
 
-  const onRemoveMeter = (id: string): void => {
-    removeItem(id);
-    refetchMeters(dataMeters);
+  const onRemoveMeter = () => {
+    console.log("remove");
   };
 
-  const handlePageChange = (pageNumber: number) => {
-    setPageNumber(pageNumber);
-  };
-
-  const createMeter = meters?.results.map(
-    (meter: TMeter, index: number) => {
-      const area = ((areas as TArea[]) || []).find(
-        (area: TArea) => area.id === meter.area.id
+  const createMeter = meters.map((meter: Meter, index: number) => {
+    const area = areas.find((area: Area) => area.id === meter.area.id);
+    if (area) {
+      const newObj = { meter, area };
+      return (
+        <Item
+          key={index}
+          number={index + 1}
+          el={newObj}
+          onRemoveMeter={onRemoveMeter}
+        />
       );
-      if (area) {
-        const newObj = { meter, area } as TItem;
-        return <Item key={index} number={index + 1} el={newObj} onRemoveMeter={onRemoveMeter} />;
-      }
     }
-  );
+  });
 
   return (
     <main>
@@ -54,8 +50,8 @@ export const ItemsList = () => {
         </table>
       </div>
       <div className="border border-solid border-gray-200 min-h-8 rounded-b-lg">
-        <TableFooter handlePageChange={handlePageChange} count={meters?.count} pageNumber={pageNumber}/>
+        <TableFooter store={store} />
       </div>
     </main>
   );
-};
+});
