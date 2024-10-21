@@ -22,7 +22,7 @@ export const App: FC<TProps> = observer(({ store }) => {
         <strong>Список счётчиков</strong>
       </header>
       <main className="w-full h-full p-4">
-        <ItemsList/>
+        <ItemsList store={store} />
       </main>
     </div>
   );

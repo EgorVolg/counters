@@ -50,7 +50,7 @@ export const ItemsList: FC<Props> = observer(({ store }) => {
         </table>
       </div>
       <div className="border border-solid border-gray-200 min-h-8 rounded-b-lg">
-        <TableFooter />
+        <TableFooter store={store} />
       </div>
     </main>
   );

@@ -6,6 +6,6 @@ import { rootStore } from "./state/RootStore.ts";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <App store={rootStore}/>
+    <App  store={rootStore}/>
   </React.StrictMode>
 );

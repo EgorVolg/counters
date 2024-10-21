@@ -7,29 +7,35 @@ const API_URL = "https://showroom.eis24.me/api/v4/test";
 
 export type TRootStore = Instance<typeof RootStore>;
 export const RootStore = t
-  .model("RootStore", {
-    meters: t.array(MeterModel),
-    areas: t.array(AreaModel),
-    currentPage: t.optional(t.number, 0),
-  })
-  .actions((store) => ({
-    getAreas: flow(function* () {
-      const resAreas = yield axios.get(`${API_URL}/areas/`);
-      const dataAreas = resAreas.data.results;
-      store.areas = dataAreas;
-    }),
-    getMeters: flow(function* (page: number) {
-      const resMeters = yield axios.get(
-        `${API_URL}/meters/?limit=20&offset=${(page - 1) * 20}`
-      );
-      const dataMeters = resMeters.data.results;
-      store.meters = dataMeters;
-    }),
-    getCurrentPage: (page: number) => (store.currentPage = page),
-  }));
+    .model("RootStore", {
+        meters: t.array(MeterModel),
+        areas: t.array(AreaModel),
+        currentPage: t.optional(t.number, 0),
+        metersCount: t.optional(t.number, 0),
+
+    })
+    .actions((store) => ({
+        getAreas: flow(function* () {
+            const resAreas = yield axios.get(`${API_URL}/areas/?limit=158`);
+            const dataAreas = resAreas.data;
+            store.areas = dataAreas.results;
+
+        }),
+        getMeters: flow(function* (currentPage: number) {
+            const resMeters = yield axios.get(
+                `${API_URL}/meters/?limit=20&offset=${(currentPage - 1) * 20}`
+            );
+            const dataMeters = resMeters.data;
+            store.meters = dataMeters.results;
+            store.metersCount = dataMeters.count;
+        }),
+        getCurrentPage: (page: number) => (store.currentPage = page),
+    }));
 
 export const rootStore = RootStore.create({
-  meters: [],
-  areas: [],
-  currentPage: 1,
+    metersCount: 0,
+
+    meters: [],
+    areas: [],
+    currentPage: 1,
 });
