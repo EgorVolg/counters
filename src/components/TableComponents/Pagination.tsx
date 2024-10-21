@@ -31,7 +31,7 @@ export const Pagination: React.FC<PaginationProps> = observer(({ store }) => {
             -1,
             ...Array.from({ length: 8 }, (_, i) => totalPages - 8 + i + 1)
           );
-        } else if (currentPage > 6 && currentPage < totalPages - 6) {
+        } else {
           pages.push(
             1,
             2,
@@ -56,12 +56,10 @@ export const Pagination: React.FC<PaginationProps> = observer(({ store }) => {
 
   const handlePageChange = useCallback(
     (page: number) => {
-      if (page > 0 && page <= totalPages) {
-        getMeters(page);
-        getCurrentPage(page);
-      }
+      getMeters(page);
+      getCurrentPage(page);
     },
-    [totalPages, getCurrentPage, getMeters]
+    [getCurrentPage, getMeters]
   );
 
   useEffect(() => {
