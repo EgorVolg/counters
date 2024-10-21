@@ -1,5 +1,5 @@
 import { FC, useEffect } from "react";
-import { ItemsList } from "./components/TableComponents/Itemslist";
+import { MetersList } from "./components/TableComponents/MetersList";
 import { TRootStore } from "./state/RootStore";
 import { observer } from "mobx-react-lite";
 
@@ -9,11 +9,11 @@ type TProps = {
 
 export const App: FC<TProps> = observer(({ store }) => {
   useEffect(() => {
-    const callFetch = async () => {
+    const fetchData = async () => {
       await store.getAreas();
       await store.getMeters(1);
     };
-    void callFetch();
+    void fetchData();
   }, [store]);
 
   return (
@@ -22,7 +22,7 @@ export const App: FC<TProps> = observer(({ store }) => {
         <strong>Список счётчиков</strong>
       </header>
       <main className="w-full h-full p-4">
-        <ItemsList store={store} />
+        <MetersList store={store} />
       </main>
     </div>
   );

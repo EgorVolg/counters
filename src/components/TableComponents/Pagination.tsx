@@ -54,13 +54,10 @@ export const Pagination: React.FC<PaginationProps> = observer(({ store }) => {
     []
   );
 
-  const handlePageChange = useCallback(
-    (page: number) => {
-      getMeters(page);
-      getCurrentPage(page);
-    },
-    [getCurrentPage, getMeters]
-  );
+  const handlePageChange = (page: number) => {
+    getMeters(page);
+    getCurrentPage(page);
+  };
 
   useEffect(() => {
     setVisiblePages(calculateVisiblePages(currentPage, totalPages));
@@ -68,10 +65,10 @@ export const Pagination: React.FC<PaginationProps> = observer(({ store }) => {
 
   return (
     <div className="flex justify-center">
-      {visiblePages.map((page, index) => (
+      {visiblePages.map((page) => (
         <button
           className="paginationButton"
-          key={index}
+          key={page}
           onClick={() => handlePageChange(page)}
           disabled={currentPage === page || page === -1}
           style={{
