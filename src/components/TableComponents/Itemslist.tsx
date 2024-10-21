@@ -12,14 +12,15 @@ export type Meter = Instance<typeof MeterModel>;
 export type Area = Instance<typeof AreaModel>;
 
 type Props = {
-  store: TRootStore
-} 
+  store: TRootStore;
+};
 
 export const ItemsList: FC<Props> = observer(({ store }) => {
-  const { meters, areas } = store;
+  const { meters, areas, deleteMeter, getMeters, currentPage } = store;
 
-  const onRemoveMeter = () => {
-    console.log("remove");
+  const onRemoveMeter = async (id: string) => {
+    await deleteMeter(id);
+    await getMeters(currentPage);
   };
 
   const createMeter = meters.map((meter: Meter, index: number) => {

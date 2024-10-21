@@ -29,12 +29,14 @@ export const RootStore = t
             store.meters = dataMeters.results;
             store.metersCount = dataMeters.count;
         }),
+        deleteMeter: flow(function* (id: string) {
+            yield axios.delete(`${API_URL}/meters/${id}`);
+        }),
         getCurrentPage: (page: number) => (store.currentPage = page),
     }));
 
 export const rootStore = RootStore.create({
     metersCount: 0,
-
     meters: [],
     areas: [],
     currentPage: 1,
