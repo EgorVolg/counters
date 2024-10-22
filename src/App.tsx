@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import { useAction } from "./components/hooks/useAction.ts";
 import { useGetAreasQuery, useGetMetersQuery } from "./api/makeRequest.ts";
-import { ItemsList } from "./components/TableComponents/Itemslist.tsx";
+import { Table } from "./components/TableComponents/Table.tsx";
+ 
 
 export const App = () => {
   const { updateAreas, updateMeters } = useAction();
@@ -22,7 +23,7 @@ export const App = () => {
         <strong>Список счётчиков</strong>
       </header>
       <main className="w-full h-full p-4">
-        <ItemsList />
+        <Table />
       </main>
     </div>
   );

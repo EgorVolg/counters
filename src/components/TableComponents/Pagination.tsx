@@ -62,14 +62,11 @@ export const Pagination: React.FC<PaginationProps> = ({
     []
   );
 
-  const handlePageChange = useCallback(
-    (page: number) => {
-      if (page > 0 && page <= totalPages) {
-        onPageChange(page);
-      }
-    },
-    [onPageChange, totalPages]
-  );
+  const handlePageChange = (page: number) => {
+    if (page > 0 && page <= totalPages) {
+      onPageChange(page);
+    }
+  };
 
   useEffect(() => {
     setVisiblePages(calculateVisiblePages(currentPage, totalPages));

@@ -1,4 +1,4 @@
-import {Pagination} from "./Pagination";
+import { Pagination } from "./Pagination";
 
 export const TableFooter = ({
   handlePageChange,
@@ -10,6 +10,10 @@ export const TableFooter = ({
   pageNumber: number;
 }) => (
   <div className="flex justify-end items-center p-2">
-    <Pagination totalPages={Math.ceil(count / 20)} onPageChange={handlePageChange} currentPage={pageNumber}/>
+    <Pagination
+      totalPages={Math.ceil(count / 20)}
+      onPageChange={handlePageChange}
+      currentPage={pageNumber}
+    />
   </div>
 );
