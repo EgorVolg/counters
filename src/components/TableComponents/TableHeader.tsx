@@ -9,12 +9,8 @@ const navItemsList = [
 ];
 
 export const TableHeader = () => {
-  return navItemsList.map(({ title }, index: number) => (
-    <td
-      key={index}
-      className="p-2 min-h-8 font-semibold text-neutral-500
-       bg-[#F0F3F7] top-0 sticky z-[1] font-roboto"
-    >
+  return navItemsList.map(({ title }) => (
+    <td key={title} className="tableHeaderTd font-roboto">
       {title}
     </td>
   ));

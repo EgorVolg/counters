@@ -30,11 +30,7 @@
 .paginationButton {
   @apply w-8 h-8 border cursor-pointer bg-white text-[#1f2939] mr-1 rounded-[5px] border-solid border-[#ced5de];
 }
-
-.paginationButton:active {
-  @apply bg-slate-100/[1] text-white border-slate-300/[1];
-}
-
+ 
 .paginationButton:hover {
   @apply bg-slate-300/[1];
 }
@@ -43,6 +39,32 @@
   @apply outline-none;
 }
 
+
 .tableItemTd {
   @apply p-4 text-gray-900;
+}
+
+.deleteButton {
+  @apply invisible absolute top-0 right-0 bottom-0 align-middle px-1.5;
+}
+
+.tableContainer {
+  @apply overflow-y-auto max-h-[calc(100vh-120px)]  border border-solid border-gray-300 rounded-t-lg;
+}
+
+.meterString {
+  @apply bg-white transform duration-100 hover:bg-[#E0E5EB] border-b border-[#E0E5EB] border-solid 
+  h-[52px];
+}
+
+.tableHeaderTd {
+  @apply p-2 min-h-8 font-semibold text-neutral-500 bg-[#F0F3F7] top-0 sticky z-[1];
+}
+
+.tableFooterContainer {
+  @apply border border-solid border-gray-200 min-h-8 rounded-b-lg;
+}
+
+.paginationContainer {
+  @apply flex justify-end items-center p-2;
 }
