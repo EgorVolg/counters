@@ -3,7 +3,6 @@ import moment from "moment";
 import { Instance } from "mobx-state-tree";
 import { MeterModel } from "../../state/models/Meters.model";
 import { AreaModel } from "../../state/models/Areas.model";
-
 import RemoveIconDefault from "../Icons/remove_icon.default.svg";
 import { GetType } from "./GetType";
 
@@ -23,10 +22,7 @@ export const Meter: React.FC<{
   const formattedDate = moment(meter.installation_date).format("DD.MM.YYYY");
 
   return (
-    <tr
-      className="bg-white transform duration-100 hover:bg-[#E0E5EB] border-b border-[#E0E5EB] border-solid 
-    h-[52px] group/item"
-    >
+    <tr className="meterString group/item">
       <td className="tableItemTd">{meterNumber}</td>
       <td className="tableItemTd">
         <GetType meter={meter} />
@@ -40,7 +36,7 @@ export const Meter: React.FC<{
           к. {area.number}, {area.str_number_full}
         </div>
         <button
-          className="invisible absolute top-0 right-0 bottom-0 align-center px-1.5 group-hover/item:visible"
+          className="deleteButton group-hover/item:visible"
           onClick={() => onRemoveMeter(meter.id)}
         >
           <img src={RemoveIconDefault} alt="delete" width={32} height={32} />

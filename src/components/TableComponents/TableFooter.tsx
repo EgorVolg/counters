@@ -4,7 +4,7 @@ import { TRootStore } from "../../state/RootStore";
 
 
 export const TableFooter = observer(({store}: {store: TRootStore}) => (
-  <div className="flex justify-end items-center p-2">
+  <div className="paginationContainer">
     <Pagination store={store}/>
   </div>
 ));

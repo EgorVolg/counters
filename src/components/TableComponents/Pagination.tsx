@@ -65,15 +65,12 @@ export const Pagination: React.FC<PaginationProps> = observer(({ store }) => {
 
   return (
     <div className="flex justify-center">
-      {visiblePages.map((page) => (
+      {visiblePages.map((page, index) => (
         <button
-          className="paginationButton"
-          key={page}
+          className="paginationButton bg-[currentPage === page ? #CED5DE : white ] "
+          key={index}
           onClick={() => handlePageChange(page)}
           disabled={currentPage === page || page === -1}
-          style={{
-            backgroundColor: currentPage === page ? "#CED5DE" : "white",
-          }}
         >
           {page === -1 ? "..." : page}
         </button>
