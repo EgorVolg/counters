@@ -2,8 +2,7 @@ import HotWaterIcon from "../Icons/hotwater_icon.svg";
 import ColdWaterIcon from "../Icons/coldwater_icon.svg";
 import { TMeter } from "../types";
 
-export const GetType = ({ meter }: { meter: TMeter }) => {
-  const [type] = meter._type;
+export const GetType = ({ type }: { type: TMeter["_type"][0] }) => {
   if (type === "HotWaterAreaMeter") {
     return (
       <div className="flex items-center justify-start">

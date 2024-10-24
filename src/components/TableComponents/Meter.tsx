@@ -23,7 +23,7 @@ export const Meter: React.FC<{
     <tr className="meterString group/item">
       <td className="tableItemTd">{meterNumber}</td>
       <td className="tableItemTd">
-        <GetType meter={meter} />
+        <GetType type={meter._type[0]} />
       </td>
       <td className="tableItemTd">{formattedDate} </td>
       <td className="tableItemTd">{isAutomatic} </td>
