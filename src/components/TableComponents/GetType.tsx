@@ -1,5 +1,5 @@
-import HotWaterIcon from "./../Icons/hotwatericon.svg";
-import ColdWaterIcon from "./../Icons/coldwatericon.svg";
+import HotWaterIcon from "../Icons/hotwatericon.svg";
+import ColdWaterIcon from "../Icons/coldwatericon.svg";
 import { TMeter } from "../types";
 
 export const GetType = ({ type }: { type: TMeter["_type"][0] }) => {

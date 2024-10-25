@@ -3,7 +3,7 @@ const config = {
     "^.+\\.[t|j]sx?$": [ "ts-jest", {
         isolatedModal: true,
       }],
-    "^.+\\..svg$": "<rootDir>/svgTransform.js",
+    "^.+\\.svg$": "<rootDir>/svgTransform.js",
   },
   testEnvironment: "jsdom",
 };
