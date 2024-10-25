@@ -12,11 +12,6 @@
     "preview": "vite preview",
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest"
   },
-  "jest": {
-    "transform": {
-      "^.+\\.[t|j]sx?$": "babel-jest"
-    }
-  },
   "dependencies": {
     "@reduxjs/toolkit": "^2.3.0",
     "add": "^2.0.6",

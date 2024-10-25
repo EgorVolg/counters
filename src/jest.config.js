@@ -1,12 +1,14 @@
-module.exports = {
-    preset: 'ts-jest',
-    testEnvironment: 'jsdom',
-    transform: {
-      '^.+\\.tsx?$': 'ts-jest',
-    },
-    moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-    testPathIgnorePatterns: ['/node_modules/', '/dist/'],
-    collectCoverage: true,
-    coverageDirectory: 'coverage',
-    coverageReporters: ['text', 'lcov'],
-  };
+const config = {
+  transform: {
+    "^.+\\.[t|j]sx?$": [
+      "ts-jest",
+      {
+        isolatedModal: true,
+      },
+    ],
+    "^.+\\..svg$": "<rootDir>/svgTransform.js",
+  },
+  testEnvironment: "jsdom",
+};
+
+export default config;
