@@ -1,12 +1,15 @@
-import { TableHeader } from "./TableHeader.tsx";
-import { useGetMetersQuery } from "../../api/makeRequest.ts";
-import { TableFooter } from "./TableFooter.tsx";
+import { TableHeader } from "./TableHeader";
+import { useGetMetersQuery } from "../../api/makeRequest";
+import { TableFooter } from "./TableFooter";
 import { useState } from "react";
-import { MetersListMap } from "./MeterList.tsx";
+import { MetersListMap } from "./MeterList";
 
 export const Table = () => {
   const [pageNumber, setPageNumber] = useState(1);
   const { data: meters } = useGetMetersQuery(pageNumber);
+
+  const count = meters?.count || 0;
+
 
   const handlePageChange = (pageNumber: number) => {
     setPageNumber(pageNumber);
@@ -29,7 +32,7 @@ export const Table = () => {
       <div className="border border-solid border-gray-200 min-h-8 rounded-b-lg">
         <TableFooter
           handlePageChange={handlePageChange}
-          count={meters?.count}
+          count={count}
           pageNumber={pageNumber}
         />
       </div>

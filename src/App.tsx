@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import { useAction } from "./components/hooks/useAction.ts";
-import { useGetAreasQuery, useGetMetersQuery } from "./api/makeRequest.ts";
-import { Table } from "./components/TableComponents/Table.tsx";
+import { useAction } from "./components/hooks/useAction";
+import { useGetAreasQuery, useGetMetersQuery } from "./api/makeRequest";
+import { Table } from "./components/TableComponents/Table";
  
 
 export const App = () => {
