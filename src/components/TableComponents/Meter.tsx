@@ -1,6 +1,6 @@
 import React from "react";
 import moment from "moment";
-import RemoveIconDefault from "../Icons/deletebutton_icon.svg";
+import RemoveIconDefault from "../Icons/deletebuttonicon.svg";
 import { TArea, TMeter } from "../types";
 import { GetType } from "./GetType";
 
