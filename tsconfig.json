@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": false
   },
   "files": [],
   "references": [

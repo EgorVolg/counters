@@ -2,7 +2,7 @@ export type TMeter = {
   id: string;
   _type: string[];
   area: { id: string };
-  is_automatic: null;
+  is_automatic: null | boolean;
   communication: string;
   description: string;
   serial_number: string;
