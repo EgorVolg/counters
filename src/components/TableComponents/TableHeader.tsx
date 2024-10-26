@@ -10,8 +10,8 @@ const navItemsList = [
 
 export const TableHeader = () => {
   return navItemsList.map(({ title }) => (
-    <td key={title} className="tableHeaderTd font-roboto">
+    <th key={title} className="tableHeaderTd font-roboto">
       {title}
-    </td>
+    </th>
   ));
 };
