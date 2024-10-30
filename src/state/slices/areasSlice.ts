@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
- 
+
 export const areasSlice = createSlice({
     name: "areas",
     initialState: [],
@@ -13,5 +13,4 @@ export const areasSlice = createSlice({
 });
 
 export const { updateAreas } = areasSlice.actions;
-
 export default areasSlice.reducer;

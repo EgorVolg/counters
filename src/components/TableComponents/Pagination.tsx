@@ -1,23 +1,17 @@
 import React, { useCallback, useEffect, useState } from "react";
+import { useAction } from "../hooks/useAction";
 
-interface PaginationProps {
+type PaginationProps = {
   totalPages: number;
   currentPage: number;
-  onPageChange: (page: number) => void;
-}
-
-interface PaginationProps {
-  totalPages: number;
-  currentPage: number;
-  onPageChange: (page: number) => void;
-}
+};
 
 export const Pagination: React.FC<PaginationProps> = ({
   totalPages,
   currentPage,
-  onPageChange,
 }) => {
   const [visiblePages, setVisiblePages] = useState<number[]>([]);
+  const { updateCurrentPage } = useAction();
 
   const calculateVisiblePages = useCallback(
     (currentPage: number, totalPages: number) => {
@@ -64,7 +58,7 @@ export const Pagination: React.FC<PaginationProps> = ({
 
   const handlePageChange = (page: number) => {
     if (page > 0 && page <= totalPages) {
-      onPageChange(page);
+      updateCurrentPage({ currentPage: page });
     }
   };
 

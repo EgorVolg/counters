@@ -1,19 +1,15 @@
 import { TableHeader } from "./TableHeader";
 import { useGetMetersQuery } from "../../api/makeRequest";
 import { TableFooter } from "./TableFooter";
-import { useState } from "react";
 import { MetersListMap } from "./MeterList";
+import { useSelector } from "react-redux";
 
 export const Table = () => {
-  const [pageNumber, setPageNumber] = useState(1);
+  const pageNumber = useSelector((state: number) => state.currentPage);
+  console.log(pageNumber);
+
   const { data: meters } = useGetMetersQuery(pageNumber);
-
   const count = meters?.count || 0;
-
-
-  const handlePageChange = (pageNumber: number) => {
-    setPageNumber(pageNumber);
-  };
 
   return (
     <main>
@@ -30,11 +26,7 @@ export const Table = () => {
         </table>
       </div>
       <div className="border border-solid border-gray-200 min-h-8 rounded-b-lg">
-        <TableFooter
-          handlePageChange={handlePageChange}
-          count={count}
-          pageNumber={pageNumber}
-        />
+        <TableFooter count={count} pageNumber={pageNumber} />
       </div>
     </main>
   );

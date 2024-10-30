@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { useAction } from "./components/hooks/useAction";
 import { useGetAreasQuery, useGetMetersQuery } from "./api/makeRequest";
 import { Table } from "./components/TableComponents/Table";
- 
 
 export const App = () => {
   const { updateAreas, updateMeters } = useAction();
